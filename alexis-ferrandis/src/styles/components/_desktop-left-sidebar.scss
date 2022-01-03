@@ -1,0 +1,31 @@
+.desktop-left-sidebar {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 6px;
+	@extend .sidebar-background;
+	&__button {
+		background: rgba(0, 0, 0, 0);
+		border: none;
+		margin: 3px 0;
+		transition: $short-animation;
+		border-radius: 7px;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.09);
+			background: rgba(0, 0, 0, 0.05);
+		}
+		&:focus {
+			transform: scale(1.11);
+			background: rgba(0, 0, 0, 0.1);
+		}
+		img {
+			// ico
+			width: 48px;
+			height: 48px;
+		}
+	}
+}

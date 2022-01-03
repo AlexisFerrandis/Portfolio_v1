@@ -1,7 +1,8 @@
 import React from "react";
+import DesktopLeftSidebar from "../components/DesktopLeftSidebar";
 
 const Desktop = () => {
-	return <div>Desktop</div>;
+	return <DesktopLeftSidebar />;
 };
 
 export default Desktop;
