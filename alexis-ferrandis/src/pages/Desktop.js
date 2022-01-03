@@ -1,14 +1,14 @@
 import React from "react";
 import DesktopTopSidebar from "../components/DesktopTopSidebar";
 import DesktopLeftSidebar from "../components/DesktopLeftSidebar";
-import DesktopWidget from "../components/DesktopWidget";
+import DesktopWallpaper from "../components/DesktopWallpaper";
 
 const Desktop = () => {
 	return (
 		<>
+			<DesktopWallpaper />
 			<DesktopTopSidebar />
 			<DesktopLeftSidebar />
-			<DesktopWidget />
 		</>
 	);
 };

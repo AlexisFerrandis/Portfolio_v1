@@ -7,8 +7,10 @@
 	height: 30px;
 	padding: 2px 5px;
 	@extend .sidebar-background;
-	color: $grey-font;
 	cursor: default;
+	div:first-child {
+		width: 96px;
+	}
 	&__options {
 		display: flex;
 		align-items: center;
@@ -16,7 +18,7 @@
 			background-color: transparent;
 			border: none;
 			width: 20px;
-			height: 20px;
+			height: 18px;
 			margin: 0 6px;
 			transition: $short-animation;
 			cursor: pointer;
