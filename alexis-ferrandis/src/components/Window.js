@@ -6,8 +6,7 @@ const Window = () => {
 	// 	windowBar[i].addEventListener("click", () => {
 	// 		console.log("prout");
 	// 	});
-	// }
-	// Make the DIV element draggable:
+	// }// Make the DIV element draggable:
 	dragElement(document.getElementById("mydiv"));
 
 	function dragElement(elmnt) {
