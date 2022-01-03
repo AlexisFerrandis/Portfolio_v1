@@ -7,8 +7,10 @@
 	transform: translateY(-50%);
 	padding: 6px;
 	@extend .sidebar-background;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
 	&__button {
-		background: rgba(0, 0, 0, 0);
+		background: transparent;
 		border: none;
 		margin: 3px 0;
 		transition: $short-animation;
