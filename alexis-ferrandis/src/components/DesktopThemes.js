@@ -1,8 +1,8 @@
 import React from "react";
 
-const DesktopWallpaper = () => {
+const DesktopThemes = () => {
 	return (
-		<div className="desktop-wallpaper__cloud">
+		<div className="desktop-theme__cloud">
 			<div className="cloud cloud__one"></div>
 			<div className="cloud cloud__two"></div>
 			<div className="cloud cloud__three"></div>
@@ -11,4 +11,4 @@ const DesktopWallpaper = () => {
 	);
 };
 
-export default DesktopWallpaper;
+export default DesktopThemes;

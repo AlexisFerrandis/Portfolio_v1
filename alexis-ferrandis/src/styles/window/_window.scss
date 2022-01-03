@@ -1,0 +1,13 @@
+.window {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 42px;
+	left: 42px;
+	background-color: violet;
+	&-information-bar {
+		height: 42px;
+		width: 100%;
+		background-color: yellowgreen;
+	}
+}

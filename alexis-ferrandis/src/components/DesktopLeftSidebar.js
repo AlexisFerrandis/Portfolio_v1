@@ -16,6 +16,9 @@ const DesktopLeftSidebar = () => {
 				<img src="./assets/icons/wallpaper-ico.svg" alt="Wallpaper button, open wallpaper's selection on click." />
 			</button>
 			<button className="desktop-left-sidebar__button">
+				<img src="./assets/icons/arcade-ico.svg" alt="Launch the game !" />
+			</button>
+			<button className="desktop-left-sidebar__button">
 				<img src="./assets/icons/settings-ico.svg" alt="Settings, personalize desktop" />
 			</button>
 		</div>

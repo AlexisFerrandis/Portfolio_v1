@@ -1,16 +1,11 @@
 .desktop-top-sidebar {
 	position: absolute;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: right;
 	width: 100%;
-	height: 30px;
-	padding: 2px 5px;
+	padding: 5px;
 	@extend .sidebar-background;
 	cursor: default;
-	div:first-child {
-		width: 96px;
-	}
 	&__options {
 		display: flex;
 		align-items: center;

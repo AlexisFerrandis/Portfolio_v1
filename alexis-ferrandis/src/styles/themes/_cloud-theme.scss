@@ -1,4 +1,4 @@
-.desktop-wallpaper__cloud {
+.desktop-theme__cloud {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -34,7 +34,7 @@
 			bottom: 15px;
 		}
 		&__four {
-			animation: cloud-movement-two 20s linear infinite;
+			animation: cloud-movement-two 13s linear infinite;
 			animation-delay: -7s;
 			opacity: 0.2;
 			z-index: -3;
