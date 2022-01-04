@@ -2,18 +2,17 @@ import React from "react";
 import HeaderBarBtn from "./HeaderBarBtn";
 
 const Window = (props) => {
-	let windowHeader = document.querySelectorAll(".window-header-bar");
 	let windows = document.querySelectorAll(".window");
 
 	function enableDraggableWindow() {
-		for (let i = 0; i < windowHeader.length; i++) {
+		for (let i = 0; i < windows.length; i++) {
 			function dragWindow(element) {
 				let pos1 = 0,
 					pos2 = 0,
 					pos3 = 0,
 					pos4 = 0;
 
-				windowHeader[i].onmousedown = dragMouseDown;
+				windows[i].onmousedown = dragMouseDown;
 
 				function dragMouseDown(e) {
 					e = e || window.event;
@@ -45,15 +44,15 @@ const Window = (props) => {
 		}
 	}
 	return (
-		<div className="window">
-			<div onMouseDown={enableDraggableWindow} className="window-header-bar">
+		<section onClick={enableDraggableWindow} className="window" id={props.id}>
+			<div className="window-header-bar">
 				<div className="window-header-bar__buttons">
-					<HeaderBarBtn />
+					<HeaderBarBtn id={props.id + `Btn`} />
 				</div>
 				<div className="window-header-bar__title">{props.title}</div>
 			</div>
 			<div className="window-content">{props.content}</div>
-		</div>
+		</section>
 	);
 };
 

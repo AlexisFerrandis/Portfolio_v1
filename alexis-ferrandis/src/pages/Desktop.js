@@ -12,7 +12,13 @@ const Desktop = () => {
 			<DesktopLeftSidebar />
 			<DesktopThemes />
 			<DesktopLogo />
-			<Window title={"Welcome"} content={"Hello World !"} />
+			<Window id={"welcome"} title={"Welcome"} content={"Hello World !"} />
+			<Window id={"profilWindow"} title={"Profil"} content={"Hi, i'm Alexis !"} />
+			<Window id={"portfolioWindow"} title={"Portfolio"} content={"My Portfolio :)"} />
+			<Window id={"contactWindow"} title={"Contact"} content={"U can contact me here :)"} />
+			<Window id={"themesWindow"} title={"Themes"} content={"Select a theme :)"} />
+			<Window id={"arcadeWindow"} title={"Arcade"} content={"Game !"} />
+			<Window id={"settingsWindow"} title={"Settings"} content={"SETTTINNNNNNNNNNNNNNNGS"} />
 		</div>
 	);
 };
