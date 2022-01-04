@@ -8,6 +8,7 @@
 	padding: 6px;
 	@extend .sidebar-background;
 	border-radius: 7px;
+	z-index: 10;
 	&__button {
 		background: transparent;
 		border: none;
@@ -15,6 +16,7 @@
 		transition: $short-animation;
 		border-radius: 7px;
 		cursor: pointer;
+		user-select: none;
 		&:hover {
 			transform: scale(1.09);
 			background: rgba(0, 0, 0, 0.05);

@@ -6,6 +6,7 @@
 	padding: 5px;
 	@extend .sidebar-background;
 	cursor: default;
+	z-index: 10;
 	&__options {
 		display: flex;
 		align-items: center;
@@ -16,6 +17,7 @@
 			height: 18px;
 			margin: 0 6px;
 			transition: $short-animation;
+			user-select: none;
 			cursor: pointer;
 			&:hover {
 				background: rgba(0, 0, 0, 0.05);
@@ -27,6 +29,7 @@
 				// ico
 				width: 14px;
 				height: 18px;
+				filter: invert(100%);
 			}
 		}
 	}

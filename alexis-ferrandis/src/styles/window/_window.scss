@@ -2,12 +2,38 @@
 	position: absolute;
 	width: 400px;
 	height: 400px;
-	top: 42px;
-	left: 42px;
-	background-color: violet;
-	&-information-bar {
-		height: 42px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@extend .window-background;
+	border-radius: 7px;
+	&-header-bar {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 28px;
 		width: 100%;
-		background-color: yellowgreen;
+		background-color: rgba(255, 255, 255, 0.6);
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		&__buttons {
+			display: flex;
+			button {
+				border: none;
+				margin-left: 6px;
+			}
+		}
+		&__title {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			cursor: default;
+			user-select: none;
+		}
+	}
+	&-content {
+		padding: 7px;
+		color: $grey-font;
 	}
 }
