@@ -39,25 +39,25 @@ const HeaderBarBtn = (props) => {
 	function smallerWindow(e) {
 		switch (e.target.id) {
 			case "welcomeBtnSmaller":
-				windowSpecification(welcomeWindow, "20%");
+				smallerSpecification(welcomeWindow, "20%");
 				break;
 			case "profilWindowBtnSmaller":
-				windowSpecification(profilWindow, "30%");
+				smallerSpecification(profilWindow, "30%");
 				break;
 			case "portfolioWindowBtnSmaller":
-				windowSpecification(portfolioWindow, "40%");
+				smallerSpecification(portfolioWindow, "40%");
 				break;
 			case "contactWindowBtnSmaller":
-				windowSpecification(contactWindow, "50%");
+				smallerSpecification(contactWindow, "50%");
 				break;
 			case "themesWindowBtnSmaller":
-				windowSpecification(themesWindow, "60%");
+				smallerSpecification(themesWindow, "60%");
 				break;
 			case "arcadeWindowBtnSmaller":
-				windowSpecification(arcadeWindow, "70%");
+				smallerSpecification(arcadeWindow, "70%");
 				break;
 			case "settingsWindowBtnSmaller":
-				windowSpecification(settingsWindow, "80%");
+				smallerSpecification(settingsWindow, "80%");
 				break;
 			default:
 				console.log("ERR : No such thing as a reducer button !");
@@ -66,41 +66,41 @@ const HeaderBarBtn = (props) => {
 	function fullScreenWindow(e) {
 		switch (e.target.id) {
 			case "welcomeBtnFull":
-				biggerWindow(welcomeWindow);
+				biggerWindow(welcomeWindow, "45%", "50%", "80%", "50%");
 				break;
 			case "profilWindowBtnFull":
-				biggerWindow(profilWindow);
+				biggerWindow(profilWindow, "48%");
 				break;
 			case "portfolioWindowBtnFull":
-				biggerWindow(portfolioWindow);
+				biggerWindow(portfolioWindow, "51%");
 				break;
 			case "contactWindowBtnFull":
-				biggerWindow(contactWindow);
+				biggerWindow(contactWindow, "54%");
 				break;
 			case "themesWindowBtnFull":
-				biggerWindow(themesWindow);
+				biggerWindow(themesWindow, "57%");
 				break;
 			case "arcadeWindowBtnFull":
-				biggerWindow(arcadeWindow);
+				biggerWindow(arcadeWindow, "60%");
 				break;
 			case "settingsWindowBtnFull":
-				biggerWindow(settingsWindow);
+				biggerWindow(settingsWindow, "63%");
 				break;
 			default:
 				console.log("ERR : No such thing as a full screen button !");
 		}
 	}
-	function windowSpecification(windowId, left) {
+	function smallerSpecification(windowId, left) {
 		windowId.style.left = left;
 		windowId.style.top = "111vh";
-		windowId.style.width = "250px";
+		windowId.style.width = "290px";
 		windowId.style.height = "270px";
 	}
-	function biggerWindow(windowId) {
-		windowId.style.top = "50%";
-		windowId.style.left = "50%";
-		windowId.style.width = "80%";
-		windowId.style.height = "80%";
+	function biggerWindow(windowId, top = "50%", left = "50%", width = "80%", height = "80%") {
+		windowId.style.top = top;
+		windowId.style.left = left;
+		windowId.style.width = width;
+		windowId.style.height = height;
 	}
 
 	return (

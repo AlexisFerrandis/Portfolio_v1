@@ -2,7 +2,7 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: $cloud-sky;
+	background: linear-gradient(0deg, rgba(101, 194, 245, 1) 0%, rgba(101, 164, 245, 1) 66%);
 	overflow: hidden;
 	z-index: -1;
 	.cloud {

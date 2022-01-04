@@ -3,7 +3,10 @@ import DesktopTopSidebar from "../components/desktop-top-sidebar/DesktopTopSideb
 import DesktopLeftSidebar from "../components/desktop-left-sidebar/DesktopLeftSidebar";
 import DesktopThemes from "../components/DesktopThemes";
 import Window from "../components/windows/Window";
+
 import DesktopLogo from "../components/DesktopLogo";
+
+import WelcomeContent from "../components/window-content/WelcomeContent";
 
 const Desktop = () => {
 	return (
@@ -12,7 +15,7 @@ const Desktop = () => {
 			<DesktopLeftSidebar />
 			<DesktopThemes />
 			<DesktopLogo />
-			<Window id={"welcome"} title={"Welcome"} content={"Hello World !"} />
+			<Window id={"welcome"} title={"Welcome"} content={<WelcomeContent />} />
 			<Window id={"profilWindow"} title={"Profil"} content={"Hi, i'm Alexis !"} />
 			<Window id={"portfolioWindow"} title={"Portfolio"} content={"My Portfolio :)"} />
 			<Window id={"contactWindow"} title={"Contact"} content={"U can contact me here :)"} />

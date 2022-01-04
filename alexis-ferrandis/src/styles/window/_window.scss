@@ -1,7 +1,9 @@
 .window {
 	position: absolute;
-	width: 400px;
-	height: 400px;
+	width: 80%;
+	height: 80%;
+	max-width: 700px;
+	max-height: 700px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -35,6 +37,7 @@
 	&-content {
 		padding: 7px;
 		color: $grey-font;
+		height: 100%;
 	}
 }
 #profilWindow,
