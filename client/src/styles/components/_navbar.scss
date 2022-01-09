@@ -6,9 +6,9 @@
 	top: 50%;
 	transform: translateY(-50%);
 	padding: 6px;
-	@extend .navbar-background;
+	@extend .glass-background;
 	border-radius: 7px;
-	z-index: 9;
+	z-index: 99;
 	button {
 		background: transparent;
 		margin: 3px 0;

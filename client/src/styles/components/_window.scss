@@ -4,7 +4,7 @@
 	right: 10%;
 	width: 80%;
 	height: 80%;
-	@extend .navbar-background;
+	@extend .glass-background;
 	border-radius: 7px;
 	&-header-bar {
 		position: relative;
@@ -49,4 +49,11 @@
 }
 .green-button {
 	background-color: $green-button;
+}
+
+// yellow button effect
+.bottom-window {
+	top: 90vh;
+	left: 15vw;
+	width: 200px;
 }

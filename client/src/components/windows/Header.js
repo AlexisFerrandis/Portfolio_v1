@@ -5,9 +5,14 @@ const Header = (props) => {
 		<div>
 			<div className="window-header-bar">
 				<div className="window-header-bar__buttons">
-					<button onClick={() => props.redBtnRef(false)} className="window-header-buttons round red-button"></button>
-					<button className="window-header-buttons round yellow-button"></button>
-					<button className="window-header-buttons round green-button"></button>
+					<button onClick={() => props.redBtnRef(false)} className="round red-button"></button>
+					<button
+						onClick={(e) => {
+							e.target.closest("section").classList.add("bottom-window");
+						}}
+						className="round yellow-button"
+					></button>
+					<button className="round green-button"></button>
 				</div>
 				<div className="window-header-bar__title">{props.title}</div>
 			</div>
