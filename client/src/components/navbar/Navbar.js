@@ -20,12 +20,6 @@ const Navbar = () => {
 	const [arcadeWindow, setArcadeWindow] = useState(false);
 	const [settingsWindow, setSettingsWindow] = useState(false);
 
-	let windowZIndex = 0;
-	const windowOnTop = (e) => {
-		windowZIndex++;
-		e.target.style.zIndex = windowZIndex;
-	};
-
 	return (
 		<>
 			<div className="navbar">
@@ -49,8 +43,8 @@ const Navbar = () => {
 				</button>
 			</div>
 			{welcomeWindow && (
-				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+				<Draggable defaultPosition={{ x: 42, y: 42 }}>
+					<section className="window" id="welcomeWindow">
 						<Header title="Welcome" redBtnRef={setWelcomeWindow} />
 						<Welcome />
 					</section>
@@ -58,7 +52,7 @@ const Navbar = () => {
 			)}
 			{profilWindow && (
 				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+					<section className="window">
 						<Header title="Profil" redBtnRef={setProfilWindow} />
 						<Profil />
 					</section>
@@ -66,7 +60,7 @@ const Navbar = () => {
 			)}
 			{portfolioWindow && (
 				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+					<section className="window">
 						<Header title="Portfolio" redBtnRef={setPortfolioWindow} />
 						<Portfolio />
 					</section>
@@ -74,15 +68,15 @@ const Navbar = () => {
 			)}
 			{contactWindow && (
 				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+					<section className="window">
 						<Header title="Contact" redBtnRef={setContactWindow} />
 						<Contact />
 					</section>
 				</Draggable>
 			)}
 			{themesWindow && (
-				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+				<Draggable defaultPosition={{ x: 442, y: 242 }}>
+					<section className="window" id="themesWindow">
 						<Header title="Themes" redBtnRef={setThemesWindow} />
 						<Themes />
 					</section>
@@ -90,7 +84,7 @@ const Navbar = () => {
 			)}
 			{arcadeWindow && (
 				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+					<section className="window">
 						<Header title="Arcade" redBtnRef={setArcadeWindow} />
 						<Arcade />
 					</section>
@@ -98,7 +92,7 @@ const Navbar = () => {
 			)}
 			{settingsWindow && (
 				<Draggable>
-					<section className="window" onClick={windowOnTop}>
+					<section className="window">
 						<Header title="Settings" redBtnRef={setSettingsWindow} />
 						<Settings />
 					</section>

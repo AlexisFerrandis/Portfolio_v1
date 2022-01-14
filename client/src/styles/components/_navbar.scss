@@ -1,17 +1,16 @@
 .navbar {
 	display: flex;
-	flex-direction: column;
 	position: absolute;
-	left: 12px;
-	top: 50%;
-	transform: translateY(-50%);
-	padding: 6px;
+	left: 50%;
+	bottom: 30px;
+	transform: translateX(-50%);
+	padding: 5px;
 	@extend .glass-background;
 	border-radius: 7px;
 	z-index: 99;
 	button {
 		background: transparent;
-		margin: 3px 0;
+		margin: 3px 10px;
 		transition: $short-animation;
 		border-radius: 7px;
 		cursor: pointer;

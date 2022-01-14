@@ -1,24 +1,22 @@
 .window {
 	position: absolute;
-	top: 10%;
-	right: 10%;
-	width: 80%;
-	height: 80%;
-	@extend .glass-background;
+	min-width: 250px;
+	min-height: 250px;
 	border-radius: 7px;
-	&-header-bar {
+	@extend .glass-background;
+	.header {
 		position: relative;
 		display: flex;
 		align-items: center;
 		height: 30px;
 		width: 100%;
-		background-color: rgba(255, 255, 255, 0.6);
+		background-color: $color-secondary;
 		border-top-left-radius: 7px;
 		border-top-right-radius: 7px;
-		&__buttons {
+		.buttons {
 			display: flex;
 		}
-		&__title {
+		.title {
 			position: absolute;
 			left: 50%;
 			top: 50%;
@@ -26,6 +24,11 @@
 			cursor: default;
 			user-select: none;
 		}
+	}
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 15px;
 	}
 }
 
@@ -49,11 +52,4 @@
 }
 .green-button {
 	background-color: $green-button;
-}
-
-// yellow button effect
-.bottom-window {
-	top: 90vh;
-	left: 15vw;
-	width: 200px;
 }

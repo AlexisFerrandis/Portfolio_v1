@@ -9,9 +9,10 @@
 	border: none;
 }
 
-$grey-font: rgb(42, 42, 42);
+$color-primary: #0d47a1;
+$color-secondary: #e3f2fd;
 
-$cloudy-sky: linear-gradient(0deg, rgba(101, 194, 245, 1) 0%, rgba(101, 164, 245, 1) 66%);
+$grey-font: rgb(42, 42, 42);
 
 $red-button: #f5544d;
 $yellow-button: #fabd2f;
@@ -24,4 +25,5 @@ $short-animation: 200ms;
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
+	// -moz-
 }

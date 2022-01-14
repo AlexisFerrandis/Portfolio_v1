@@ -4,7 +4,7 @@ const DesktopLogo = () => {
 	return (
 		<div>
 			<div className="desktop-logo">
-				<img src="./assets/logo/af-white-logo.png" alt="Alexis Ferrandis's logo" />
+				<img src="./assets/logo/af-logo.svg" alt="Alexis Ferrandis's logo" />
 			</div>
 		</div>
 	);
