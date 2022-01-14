@@ -1,6 +1,9 @@
 #themesWindow {
 	width: 430px;
 	.content {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 15px;
 		.theme-illustration {
 			width: 100px;
 			text-align: center;

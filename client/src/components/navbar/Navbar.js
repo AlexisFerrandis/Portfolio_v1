@@ -3,7 +3,6 @@ import Draggable from "react-draggable";
 
 import Header from "../windows/Header";
 
-import Welcome from "../windows/Welcome";
 import Profil from "../windows/Profil";
 import Portfolio from "../windows/Portfolio";
 import Contact from "../windows/Contact";
@@ -12,7 +11,6 @@ import Arcade from "../windows/Arcade";
 import Settings from "../windows/Settings";
 
 const Navbar = () => {
-	const [welcomeWindow, setWelcomeWindow] = useState(true);
 	const [profilWindow, setProfilWindow] = useState(false);
 	const [portfolioWindow, setPortfolioWindow] = useState(false);
 	const [contactWindow, setContactWindow] = useState(false);
@@ -24,35 +22,27 @@ const Navbar = () => {
 		<>
 			<div className="navbar">
 				<button onClick={() => setProfilWindow(true)}>
-					<img src="./assets/icons/profil-ico.svg" alt="Alexis's profil" />
+					<img src="./assets/icons/profil.svg" alt="Alexis's profil" />
 				</button>
 				<button onClick={() => setPortfolioWindow(true)}>
-					<img src="./assets/icons/folder-ico.svg" alt="Alexis's portfolio" />
+					<img src="./assets/icons/folder.svg" alt="Alexis's portfolio" />
 				</button>
 				<button onClick={() => setContactWindow(true)}>
-					<img src="./assets/icons/contact-ico.svg" alt="Contact" />
+					<img src="./assets/icons/contact.svg" alt="Contact" />
 				</button>
 				<button onClick={() => setThemesWindow(true)}>
-					<img src="./assets/icons/themes-ico.svg" alt="Themes selection" />
+					<img src="./assets/icons/themes.svg" alt="Themes selection" />
 				</button>
 				<button onClick={() => setArcadeWindow(true)}>
-					<img src="./assets/icons/arcade-ico.svg" alt="Launch the game !" />
+					<img src="./assets/icons/arcade.svg" alt="Launch the game !" />
 				</button>
 				<button onClick={() => setSettingsWindow(true)}>
-					<img src="./assets/icons/settings-ico.svg" alt="Settings" />
+					<img src="./assets/icons/settings.svg" alt="Settings" />
 				</button>
 			</div>
-			{welcomeWindow && (
-				<Draggable defaultPosition={{ x: 42, y: 42 }}>
-					<section className="window" id="welcomeWindow">
-						<Header title="Welcome" redBtnRef={setWelcomeWindow} />
-						<Welcome />
-					</section>
-				</Draggable>
-			)}
 			{profilWindow && (
-				<Draggable>
-					<section className="window">
+				<Draggable defaultPosition={{ x: 42, y: 42 }}>
+					<section className="window" id="profilWindow">
 						<Header title="Profil" redBtnRef={setProfilWindow} />
 						<Profil />
 					</section>

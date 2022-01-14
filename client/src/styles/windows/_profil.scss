@@ -1,0 +1,22 @@
+#profilWindow {
+	width: 410px;
+	.content {
+		text-align: center;
+		align-items: center;
+		.profil-pic {
+			border-radius: 50%;
+			width: 142px;
+			height: 142px;
+		}
+		.map-ico {
+			width: 15px;
+			height: 20px;
+		}
+		.social {
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
