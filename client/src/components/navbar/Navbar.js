@@ -12,8 +12,14 @@ import Settings from "../windows/Settings";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
+	const [profilContent, setProfilContent] = useState(true);
+
 	const [portfolioWindow, setPortfolioWindow] = useState(false);
+	const [portfolioContent, setPortfolioContent] = useState(true);
+
 	const [contactWindow, setContactWindow] = useState(false);
+	const [contactContent, setContactContent] = useState(true);
+
 	const [themesWindow, setThemesWindow] = useState(false);
 	const [arcadeWindow, setArcadeWindow] = useState(false);
 	const [settingsWindow, setSettingsWindow] = useState(false);
@@ -41,31 +47,31 @@ const Navbar = () => {
 				</button>
 			</div>
 			{profilWindow && (
-				<Draggable defaultPosition={{ x: 42, y: 42 }}>
+				<Draggable defaultPosition={{ x: 95, y: 35 }}>
 					<section className="window" id="profilWindow">
-						<Header title="Profil" redBtnRef={setProfilWindow} />
-						<Profil />
+						<Header title="Profil" redBtnRef={setProfilWindow} yellowBtnRef={setProfilContent} greenBtnRef={setProfilContent} />
+						{profilContent && <Profil contactBtn={setContactWindow} />}
 					</section>
 				</Draggable>
 			)}
 			{portfolioWindow && (
 				<Draggable>
-					<section className="window">
-						<Header title="Portfolio" redBtnRef={setPortfolioWindow} />
-						<Portfolio />
+					<section className="window" id="portfolioWindow">
+						<Header title="Portfolio" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
+						{portfolioContent && <Portfolio />}
 					</section>
 				</Draggable>
 			)}
 			{contactWindow && (
-				<Draggable>
-					<section className="window">
-						<Header title="Contact" redBtnRef={setContactWindow} />
-						<Contact />
+				<Draggable defaultPosition={{ x: 460, y: 35 }}>
+					<section className="window" id="contactWindow">
+						<Header title="Contact" redBtnRef={setContactWindow} yellowBtnRef={setContactContent} greenBtnRef={setContactContent} />
+						{contactContent && <Contact />}
 					</section>
 				</Draggable>
 			)}
 			{themesWindow && (
-				<Draggable defaultPosition={{ x: 442, y: 242 }}>
+				<Draggable defaultPosition={{ x: 462, y: 35 }}>
 					<section className="window" id="themesWindow">
 						<Header title="Themes" redBtnRef={setThemesWindow} />
 						<Themes />

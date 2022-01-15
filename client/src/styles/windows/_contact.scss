@@ -1,0 +1,110 @@
+#contactWindow {
+	width: 560px;
+	.content {
+		img {
+			filter: invert(100%);
+		}
+		.details {
+			display: flex;
+			justify-content: space-around;
+			margin: 0.7em 0;
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 15px;
+				color: $color-2;
+				border-radius: 7px;
+				font-size: 0.9em;
+				transition: $short-animation;
+				&:hover {
+					background-color: darken(#0d48a156, $amount: 0.1);
+				}
+			}
+			img {
+				width: 25px;
+				height: 25px;
+				margin-bottom: 1em;
+			}
+		}
+		form {
+			text-align: center;
+			padding: 1em 0 0.5em;
+			// background-color: rgba(13, 72, 161, 0.5);
+			color: $color-secondary;
+			border-radius: 7px;
+			.form {
+				display: flex;
+				justify-content: space-around;
+				text-align: left;
+				font-size: 1em;
+				input {
+					padding: 5px;
+					margin: 0.5em 0 1.5em;
+					background-color: $color-secondary;
+					border-radius: 7px;
+					font-family: "Ubuntu", sans-serif;
+					font-size: 0.9em;
+					color: $color-7;
+					&:focus-visible {
+						outline: 1px solid $color-secondary;
+					}
+				}
+				textarea {
+					width: 280px;
+					height: 80%;
+					padding: 5px;
+					margin-top: 0.5em;
+					background-color: $color-secondary;
+					resize: none;
+					border-radius: 7px;
+					font-size: 0.9em;
+					color: $color-7;
+					&:focus-visible {
+						outline: 1px solid $color-2;
+					}
+				}
+			}
+			.submit {
+				background: none;
+				color: $color-secondary;
+				font-size: 1em;
+				text-transform: uppercase;
+				min-width: 140px;
+				padding: 10px 15px;
+				margin: 1em 0 1.5em;
+				border-radius: 25px;
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+				-webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+				outline: 1px solid;
+				outline-color: rgba(255, 255, 255, 0.5);
+				outline-offset: 0px;
+				transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+				cursor: pointer;
+				&:hover {
+					box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+					outline-color: rgba(255, 255, 255, 0);
+					outline-offset: 15px;
+				}
+				&:active {
+					transform: scale(0.96);
+				}
+			}
+		}
+		.social {
+			display: flex;
+			justify-content: space-around;
+			padding: 15px;
+			img {
+				width: 30px;
+				height: 30px;
+				transition: $short-animation;
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+					-webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+				}
+			}
+		}
+	}
+}
