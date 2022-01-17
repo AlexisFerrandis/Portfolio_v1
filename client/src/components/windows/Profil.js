@@ -3,7 +3,7 @@ import React from "react";
 const Profil = (props) => {
 	return (
 		<div className="content">
-			<img className="profil-pic" src="./assets/img/profil-pic.jpg" alt="Profil pic" />
+			<img className="profil-pic" src="./assets/img/profil-pic.png" alt="Profil pic" />
 			<h1>Alexis Ferrandis</h1>
 			<h2>Web Development</h2>
 			<p className="localisation">

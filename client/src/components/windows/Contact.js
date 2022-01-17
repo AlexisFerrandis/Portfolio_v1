@@ -59,7 +59,7 @@ class Contact extends React.Component {
 
 						<label>
 							Message :<br />
-							<textarea name="message" type="text" value={this.state.message} onChange={this.handleInputChange} required />
+							<textarea name="message" type="text" placeholder="Hello, is it possible to..." value={this.state.message} onChange={this.handleInputChange} required />
 						</label>
 						<br />
 					</div>

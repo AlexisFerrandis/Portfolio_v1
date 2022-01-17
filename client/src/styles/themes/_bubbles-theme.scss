@@ -1,0 +1,388 @@
+@keyframes move {
+	100% {
+		transform: translate3d(0, 0, 1px) rotate(360deg);
+	}
+}
+
+.desktop-theme__bubbles {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: #000000;
+	overflow: hidden;
+}
+
+.desktop-theme__bubbles span {
+	width: 20vmin;
+	height: 20vmin;
+	border-radius: 20vmin;
+	backface-visibility: hidden;
+	position: absolute;
+	animation: move;
+	animation-duration: 25;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.desktop-theme__bubbles span:nth-child(0) {
+	color: #1e88e5;
+	top: 8%;
+	left: 12%;
+	animation-duration: 69s;
+	animation-delay: -3s;
+	transform-origin: 23vw 7vh;
+	box-shadow: 40vmin 0 5.988871165335801vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(1) {
+	color: #0d47a1;
+	top: 31%;
+	left: 84%;
+	animation-duration: 102s;
+	animation-delay: -230s;
+	transform-origin: -13vw 13vh;
+	box-shadow: -40vmin 0 5.876724887407268vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(2) {
+	color: #1e88e5;
+	top: 75%;
+	left: 1%;
+	animation-duration: 54s;
+	animation-delay: -22s;
+	transform-origin: -17vw 17vh;
+	box-shadow: 40vmin 0 5.159918408997144vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(3) {
+	color: #1e88e5;
+	top: 90%;
+	left: 37%;
+	animation-duration: 88s;
+	animation-delay: -181s;
+	transform-origin: 18vw 19vh;
+	box-shadow: 40vmin 0 5.286995703183783vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(4) {
+	color: #e3f2fd;
+	top: 18%;
+	left: 36%;
+	animation-duration: 58s;
+	animation-delay: -124s;
+	transform-origin: 16vw -7vh;
+	box-shadow: 40vmin 0 5.855767764243481vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(5) {
+	color: #e3f2fd;
+	top: 56%;
+	left: 4%;
+	animation-duration: 253s;
+	animation-delay: -165s;
+	transform-origin: 9vw 18vh;
+	box-shadow: -40vmin 0 5.205890930363777vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(6) {
+	color: #1e88e5;
+	top: 43%;
+	left: 61%;
+	animation-duration: 153s;
+	animation-delay: -99s;
+	transform-origin: 22vw -20vh;
+	box-shadow: 40vmin 0 5.796852612408721vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(7) {
+	color: #0d47a1;
+	top: 27%;
+	left: 15%;
+	animation-duration: 89s;
+	animation-delay: -247s;
+	transform-origin: -10vw 7vh;
+	box-shadow: 40vmin 0 5.381760661569836vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(8) {
+	color: #1e88e5;
+	top: 24%;
+	left: 61%;
+	animation-duration: 134s;
+	animation-delay: -29s;
+	transform-origin: 19vw -15vh;
+	box-shadow: -40vmin 0 5.213972192663844vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(9) {
+	color: #1e88e5;
+	top: 34%;
+	left: 59%;
+	animation-duration: 36s;
+	animation-delay: -174s;
+	transform-origin: 23vw 10vh;
+	box-shadow: -40vmin 0 5.9756536060001695vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(10) {
+	color: #e3f2fd;
+	top: 34%;
+	left: 90%;
+	animation-duration: 29s;
+	animation-delay: -108s;
+	transform-origin: 2vw 22vh;
+	box-shadow: 40vmin 0 5.257312317038652vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(11) {
+	color: #1e88e5;
+	top: 36%;
+	left: 39%;
+	animation-duration: 194s;
+	animation-delay: -121s;
+	transform-origin: 5vw 19vh;
+	box-shadow: -40vmin 0 5.50251340388207vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(12) {
+	color: #1e88e5;
+	top: 50%;
+	left: 4%;
+	animation-duration: 205s;
+	animation-delay: -102s;
+	transform-origin: -6vw 7vh;
+	box-shadow: -40vmin 0 5.558416300127346vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(13) {
+	color: #0d47a1;
+	top: 10%;
+	left: 62%;
+	animation-duration: 232s;
+	animation-delay: -54s;
+	transform-origin: -6vw -18vh;
+	box-shadow: 40vmin 0 5.493275552721709vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(14) {
+	color: #e3f2fd;
+	top: 30%;
+	left: 44%;
+	animation-duration: 44s;
+	animation-delay: -64s;
+	transform-origin: 7vw -15vh;
+	box-shadow: -40vmin 0 5.275006044806381vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(15) {
+	color: #e3f2fd;
+	top: 45%;
+	left: 17%;
+	animation-duration: 7s;
+	animation-delay: -247s;
+	transform-origin: -11vw -13vh;
+	box-shadow: 40vmin 0 5.86979062912885vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(16) {
+	color: #1e88e5;
+	top: 61%;
+	left: 27%;
+	animation-duration: 174s;
+	animation-delay: -230s;
+	transform-origin: -13vw -14vh;
+	box-shadow: -40vmin 0 5.109262238446063vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(17) {
+	color: #0d47a1;
+	top: 15%;
+	left: 64%;
+	animation-duration: 130s;
+	animation-delay: -144s;
+	transform-origin: -24vw -22vh;
+	box-shadow: -40vmin 0 5.23597910542203vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(18) {
+	color: #1e88e5;
+	top: 30%;
+	left: 30%;
+	animation-duration: 196s;
+	animation-delay: -80s;
+	transform-origin: -17vw 8vh;
+	box-shadow: 40vmin 0 5.967700893591024vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(19) {
+	color: #e3f2fd;
+	top: 56%;
+	left: 15%;
+	animation-duration: 179s;
+	animation-delay: -110s;
+	transform-origin: -9vw 7vh;
+	box-shadow: 40vmin 0 5.795747649051178vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(20) {
+	color: #0d47a1;
+	top: 75%;
+	left: 95%;
+	animation-duration: 243s;
+	animation-delay: -204s;
+	transform-origin: -13vw -21vh;
+	box-shadow: -40vmin 0 5.072183994823012vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(21) {
+	color: #0d47a1;
+	top: 53%;
+	left: 10%;
+	animation-duration: 89s;
+	animation-delay: -164s;
+	transform-origin: 11vw -19vh;
+	box-shadow: -40vmin 0 5.466786843024953vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(22) {
+	color: #0d47a1;
+	top: 15%;
+	left: 33%;
+	animation-duration: 218s;
+	animation-delay: -44s;
+	transform-origin: 1vw -11vh;
+	box-shadow: -40vmin 0 5.269002617008872vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(23) {
+	color: #0d47a1;
+	top: 49%;
+	left: 12%;
+	animation-duration: 125s;
+	animation-delay: -214s;
+	transform-origin: -7vw 6vh;
+	box-shadow: -40vmin 0 5.9312347385180875vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(24) {
+	color: #1e88e5;
+	top: 84%;
+	left: 4%;
+	animation-duration: 89s;
+	animation-delay: -97s;
+	transform-origin: -4vw -22vh;
+	box-shadow: -40vmin 0 5.926208561400593vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(25) {
+	color: #0d47a1;
+	top: 57%;
+	left: 8%;
+	animation-duration: 102s;
+	animation-delay: -202s;
+	transform-origin: 22vw -13vh;
+	box-shadow: 40vmin 0 5.315677585478779vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(26) {
+	color: #1e88e5;
+	top: 59%;
+	left: 85%;
+	animation-duration: 184s;
+	animation-delay: -152s;
+	transform-origin: -23vw -5vh;
+	box-shadow: -40vmin 0 5.260341185279568vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(27) {
+	color: #0d47a1;
+	top: 85%;
+	left: 58%;
+	animation-duration: 97s;
+	animation-delay: -54s;
+	transform-origin: -7vw 19vh;
+	box-shadow: -40vmin 0 5.989135202539755vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(28) {
+	color: #1e88e5;
+	top: 66%;
+	left: 73%;
+	animation-duration: 97s;
+	animation-delay: -23s;
+	transform-origin: 17vw -4vh;
+	box-shadow: 40vmin 0 5.681427845050167vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(29) {
+	color: #e3f2fd;
+	top: 77%;
+	left: 1%;
+	animation-duration: 40s;
+	animation-delay: -115s;
+	transform-origin: -24vw -1vh;
+	box-shadow: -40vmin 0 5.484028698858769vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(30) {
+	color: #e3f2fd;
+	top: 6%;
+	left: 69%;
+	animation-duration: 230s;
+	animation-delay: -135s;
+	transform-origin: 16vw -11vh;
+	box-shadow: -40vmin 0 5.162968008724178vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(31) {
+	color: #1e88e5;
+	top: 65%;
+	left: 61%;
+	animation-duration: 64s;
+	animation-delay: -196s;
+	transform-origin: 15vw 2vh;
+	box-shadow: 40vmin 0 5.943094818995452vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(32) {
+	color: #1e88e5;
+	top: 10%;
+	left: 15%;
+	animation-duration: 70s;
+	animation-delay: -202s;
+	transform-origin: -10vw -21vh;
+	box-shadow: -40vmin 0 5.947052558402019vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(33) {
+	color: #0d47a1;
+	top: 42%;
+	left: 27%;
+	animation-duration: 238s;
+	animation-delay: -235s;
+	transform-origin: -18vw -13vh;
+	box-shadow: -40vmin 0 5.773653370135888vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(34) {
+	color: #0d47a1;
+	top: 83%;
+	left: 68%;
+	animation-duration: 56s;
+	animation-delay: -189s;
+	transform-origin: 2vw -1vh;
+	box-shadow: -40vmin 0 5.938574439328724vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(35) {
+	color: #1e88e5;
+	top: 75%;
+	left: 52%;
+	animation-duration: 229s;
+	animation-delay: -14s;
+	transform-origin: -3vw 2vh;
+	box-shadow: 40vmin 0 5.00272571018755vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(36) {
+	color: #e3f2fd;
+	top: 37%;
+	left: 49%;
+	animation-duration: 68s;
+	animation-delay: -54s;
+	transform-origin: 5vw 25vh;
+	box-shadow: -40vmin 0 5.80821176368457vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(37) {
+	color: #e3f2fd;
+	top: 55%;
+	left: 15%;
+	animation-duration: 74s;
+	animation-delay: -152s;
+	transform-origin: 10vw 7vh;
+	box-shadow: 40vmin 0 5.731307466068796vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(38) {
+	color: #0d47a1;
+	top: 62%;
+	left: 71%;
+	animation-duration: 200s;
+	animation-delay: -26s;
+	transform-origin: -9vw 0vh;
+	box-shadow: -40vmin 0 5.75705774921132vmin currentColor;
+}
+.desktop-theme__bubbles span:nth-child(39) {
+	color: #1e88e5;
+	top: 16%;
+	left: 84%;
+	animation-duration: 154s;
+	animation-delay: -134s;
+	transform-origin: 2vw 10vh;
+	box-shadow: 40vmin 0 5.491411966426194vmin currentColor;
+}

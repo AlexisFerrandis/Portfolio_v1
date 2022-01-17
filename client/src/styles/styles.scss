@@ -1,10 +1,13 @@
 @import "./settings";
 
-@import "./themes/default-theme";
-
 @import "./components/navbar";
 @import "./components/window";
 
 @import "./windows/profil";
+@import "./windows/portfolio";
 @import "./windows/contact";
 @import "./windows/themes";
+
+@import "./themes/default-theme";
+@import "./themes/matrix";
+@import "./themes/bubbles-theme";
