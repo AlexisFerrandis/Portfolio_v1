@@ -5,6 +5,7 @@ import DesktopLogo from "../themes/DesktopLogo";
 
 import DefaultTheme from "../themes/DefaultTheme";
 import MatrixTheme from "../themes/MatrixTheme";
+import ParticlesTheme from "../themes/ParticlesTheme";
 import BubblesTheme from "../themes/BubblesTheme";
 
 import Header from "../windows/Header";
@@ -34,16 +35,12 @@ const Navbar = () => {
 
 	const [themeSelection, setThemeSelection] = useState("default");
 
-	// const [defaultTheme, setDefaultTheme] = useState(true);
-	// const [matrixTheme, setMatrixTheme] = useState(false);
-	// const [bubblesTheme, setbubblesTheme] = useState(false);
-	// const [particlesTheme, setParticlesTheme] = useState(false);
-
 	return (
 		<>
 			<div className="theme-display">
 				{themeSelection === "default" && <DefaultTheme />}
 				{themeSelection === "matrix" && <MatrixTheme />}
+				{themeSelection === "particles" && <ParticlesTheme />}
 				{themeSelection === "bubbles" && <BubblesTheme />}
 				<DesktopLogo />
 			</div>

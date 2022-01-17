@@ -7,7 +7,7 @@ const Themes = (props) => {
 				<img src="./assets/img/themes/matrix-rain.gif" alt="Matrix rain theme" />
 				<p>Matrix</p>
 			</div>
-			<div className="theme-illustration">
+			<div className="theme-illustration" onClick={() => props.themeSelected("particles")}>
 				<img src="./assets/img/themes/particles.gif" alt="Particles theme" />
 				<p>Particles</p>
 			</div>
