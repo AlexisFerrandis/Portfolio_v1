@@ -16,6 +16,7 @@ import MatrixTheme from "../themes/MatrixTheme";
 import ParticlesTheme from "../themes/ParticlesTheme";
 import GradiantTheme from "../themes/GradiantTheme";
 import BubblesTheme from "../themes/BubblesTheme";
+import FloppyBird from "../arcade/FloppyBird";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -31,6 +32,8 @@ const Navbar = () => {
 	const [themesContent, setThemesContent] = useState(true);
 
 	const [arcadeWindow, setArcadeWindow] = useState(false);
+	const [arcadeContent, setArcadeContent] = useState(true);
+
 	const [settingsWindow, setSettingsWindow] = useState(false);
 
 	const [themeSelection, setThemeSelection] = useState("default");
@@ -98,10 +101,10 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{arcadeWindow && (
-				<Draggable>
-					<section className="window">
-						<Header title="Arcade" redBtnRef={setArcadeWindow} />
-						<Arcade />
+				<Draggable defaultPosition={{ x: 1032, y: 105 }}>
+					<section className="window" id="arcadeWindow">
+						<Header title="Arcade" redBtnRef={setArcadeWindow} yellowBtnRef={setArcadeContent} greenBtnRef={setArcadeContent} />
+						{arcadeContent && <Arcade />}
 					</section>
 				</Draggable>
 			)}
@@ -113,6 +116,7 @@ const Navbar = () => {
 					</section>
 				</Draggable>
 			)}
+			<div className="arcade-display">{<FloppyBird />}</div>
 		</>
 	);
 };

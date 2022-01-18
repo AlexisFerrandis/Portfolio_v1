@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+#floppyBird {
+	position: absolute;
+	h5 {
+		font-family: "Press Start 2P", cursive;
+		padding: 1.2rem 0;
+		background: #4ec0ca;
+		color: black;
+		text-align: center;
+	}
+	.score-container {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 6px;
+		background: #4ec0ca;
+		color: black;
+		border-bottom: 2px solid black;
+
+		#bestScore {
+			font-family: "Press Start 2P", cursive;
+			font-size: 0.8em;
+		}
+		#currentScore {
+			font-family: "Press Start 2P", cursive;
+			font-size: 0.8em;
+		}
+	}
+	#floppyBirdCanvas {
+		user-select: none;
+	}
+	.hidden {
+		display: none;
+	}
+}

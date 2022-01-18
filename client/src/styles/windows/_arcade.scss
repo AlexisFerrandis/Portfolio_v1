@@ -1,10 +1,10 @@
-#themesWindow {
+#arcadeWindow {
 	width: 430px;
 	.content {
 		display: flex;
 		flex-wrap: wrap;
 		padding: 15px;
-		.theme-illustration {
+		.arcade-illustration {
 			@extend .illustration-preview;
 		}
 	}
