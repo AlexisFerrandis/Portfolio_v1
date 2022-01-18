@@ -26,7 +26,7 @@ const Profil = (props) => {
 					<img src="./assets/icons/css.svg" alt="css" />
 					<img src="./assets/icons/sass.svg" alt="sass" />
 					<img src="./assets/icons/javascript.svg" alt="javascript" />
-					<img src="./assets/icons/database.svg" alt="database" id="dataBase" />
+					<img src="./assets/icons/database.svg" alt="database" />
 					<div id="dataBaseInfo">SQL &#x26; MongoDb</div>
 					<img src="./assets/icons/react.svg" alt="react" />
 				</div>

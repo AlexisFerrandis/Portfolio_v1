@@ -8,7 +8,6 @@ import Portfolio from "../windows/Portfolio";
 import Contact from "../windows/Contact";
 import Themes from "../windows/Themes";
 import Arcade from "../windows/Arcade";
-import Settings from "../windows/Settings";
 
 import DefaultTheme from "../themes/DefaultTheme";
 import TartanTheme from "../themes/TartanTheme";
@@ -16,7 +15,9 @@ import MatrixTheme from "../themes/MatrixTheme";
 import ParticlesTheme from "../themes/ParticlesTheme";
 import GradiantTheme from "../themes/GradiantTheme";
 import BubblesTheme from "../themes/BubblesTheme";
+
 import FloppyBird from "../arcade/FloppyBird";
+import TwoOFourHeight from "../arcade/TwoOFourHeight";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -34,9 +35,13 @@ const Navbar = () => {
 	const [arcadeWindow, setArcadeWindow] = useState(false);
 	const [arcadeContent, setArcadeContent] = useState(true);
 
-	const [settingsWindow, setSettingsWindow] = useState(false);
-
 	const [themeSelection, setThemeSelection] = useState("default");
+
+	const [floppyBirdWindow, setFloppyBirdWindow] = useState(false);
+	const [floppyBirdContent, setFloppyBirdContent] = useState(true);
+
+	const [twoOFourHeightWindow, setTwoOFourHeightWindow] = useState(false);
+	const [twoOFourHeightContent, setTwoOFourHeightContent] = useState(true);
 
 	return (
 		<>
@@ -63,9 +68,6 @@ const Navbar = () => {
 				</button>
 				<button onClick={() => setArcadeWindow(!arcadeWindow)}>
 					<img src="./assets/icons/arcade.svg" alt="Launch the game !" />
-				</button>
-				<button onClick={() => setSettingsWindow(!settingsWindow)}>
-					<img src="./assets/icons/settings.svg" alt="Settings" />
 				</button>
 			</div>
 			{profilWindow && (
@@ -104,19 +106,28 @@ const Navbar = () => {
 				<Draggable defaultPosition={{ x: 1032, y: 105 }}>
 					<section className="window" id="arcadeWindow">
 						<Header title="Arcade" redBtnRef={setArcadeWindow} yellowBtnRef={setArcadeContent} greenBtnRef={setArcadeContent} />
-						{arcadeContent && <Arcade />}
+						{arcadeContent && <Arcade floppyBird={setFloppyBirdWindow} twoOFourHeight={setTwoOFourHeightWindow} />}
 					</section>
 				</Draggable>
 			)}
-			{settingsWindow && (
-				<Draggable>
-					<section className="window">
-						<Header title="Settings" redBtnRef={setSettingsWindow} />
-						<Settings />
-					</section>
-				</Draggable>
-			)}
-			<div className="arcade-display">{<FloppyBird />}</div>
+			<div className="arcade-display">
+				{floppyBirdWindow && (
+					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+						<section className="window" id="floppyBird">
+							<Header title="FloppyBird" redBtnRef={setFloppyBirdWindow} yellowBtnRef={setFloppyBirdContent} greenBtnRef={setFloppyBirdContent} />
+							{floppyBirdContent && <FloppyBird />}
+						</section>
+					</Draggable>
+				)}
+				{twoOFourHeightWindow && (
+					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+						<section className="window" id="twoOFourHeight">
+							<Header title="2048" redBtnRef={setTwoOFourHeightWindow} yellowBtnRef={setTwoOFourHeightContent} greenBtnRef={setTwoOFourHeightContent} />
+							{twoOFourHeightContent && <TwoOFourHeight />}
+						</section>
+					</Draggable>
+				)}
+			</div>
 		</>
 	);
 };

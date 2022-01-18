@@ -8,25 +8,11 @@
 		background: #4ec0ca;
 		color: black;
 		text-align: center;
-	}
-	.score-container {
-		display: flex;
-		justify-content: space-between;
-		padding: 8px 6px;
-		background: #4ec0ca;
-		color: black;
 		border-bottom: 2px solid black;
-
-		#bestScore {
-			font-family: "Press Start 2P", cursive;
-			font-size: 0.8em;
-		}
-		#currentScore {
-			font-family: "Press Start 2P", cursive;
-			font-size: 0.8em;
-		}
 	}
+
 	#floppyBirdCanvas {
+		font-family: "Press Start 2P", cursive;
 		user-select: none;
 	}
 	.hidden {

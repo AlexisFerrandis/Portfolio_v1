@@ -9,11 +9,26 @@
 	border-radius: 7px;
 	z-index: 99;
 	button {
+		position: relative;
 		background: transparent;
 		margin: 3px 5px;
 		transition: $short-animation;
 		border-radius: 7px;
 		cursor: pointer;
+		overflow: visible;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: -4px;
+			transform: translateX(-50%);
+			width: 20px;
+			height: 3px;
+			border-radius: 9px;
+			background-color: $color-primary;
+			opacity: 0;
+			transition: $short-animation;
+		}
 		&:hover {
 			transform: scale(1.09);
 			background: rgba(0, 0, 0, 0.05);
@@ -21,6 +36,10 @@
 		&:focus {
 			transform: scale(1.11);
 			background: rgba(0, 0, 0, 0.1);
+			transition: 1000ms;
+			&::after {
+				opacity: 0.6;
+			}
 		}
 		img {
 			// ico
