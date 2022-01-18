@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import Draggable from "react-draggable";
 
-import DesktopLogo from "../themes/DesktopLogo";
-
-import DefaultTheme from "../themes/DefaultTheme";
-import MatrixTheme from "../themes/MatrixTheme";
-import ParticlesTheme from "../themes/ParticlesTheme";
-import BubblesTheme from "../themes/BubblesTheme";
-
 import Header from "../windows/Header";
 
 import Profil from "../windows/Profil";
@@ -16,6 +9,13 @@ import Contact from "../windows/Contact";
 import Themes from "../windows/Themes";
 import Arcade from "../windows/Arcade";
 import Settings from "../windows/Settings";
+
+import DefaultTheme from "../themes/DefaultTheme";
+import TartanTheme from "../themes/TartanTheme";
+import MatrixTheme from "../themes/MatrixTheme";
+import ParticlesTheme from "../themes/ParticlesTheme";
+import GradiantTheme from "../themes/GradiantTheme";
+import BubblesTheme from "../themes/BubblesTheme";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -39,28 +39,29 @@ const Navbar = () => {
 		<>
 			<div className="theme-display">
 				{themeSelection === "default" && <DefaultTheme />}
+				{themeSelection === "tartan" && <TartanTheme />}
 				{themeSelection === "matrix" && <MatrixTheme />}
 				{themeSelection === "particles" && <ParticlesTheme />}
+				{themeSelection === "gradiant" && <GradiantTheme />}
 				{themeSelection === "bubbles" && <BubblesTheme />}
-				<DesktopLogo />
 			</div>
 			<div className="navbar">
-				<button onClick={() => setProfilWindow(true)}>
+				<button onClick={() => setProfilWindow(!profilWindow)}>
 					<img src="./assets/icons/profil.svg" alt="Alexis's profil" />
 				</button>
-				<button onClick={() => setPortfolioWindow(true)}>
+				<button onClick={() => setPortfolioWindow(!portfolioWindow)}>
 					<img src="./assets/icons/folder.svg" alt="Alexis's portfolio" />
 				</button>
-				<button onClick={() => setContactWindow(true)}>
+				<button onClick={() => setContactWindow(!contactWindow)}>
 					<img src="./assets/icons/contact.svg" alt="Contact" />
 				</button>
-				<button onClick={() => setThemesWindow(true)}>
+				<button onClick={() => setThemesWindow(!themesWindow)}>
 					<img src="./assets/icons/themes.svg" alt="Themes selection" />
 				</button>
-				<button onClick={() => setArcadeWindow(true)}>
+				<button onClick={() => setArcadeWindow(!arcadeWindow)}>
 					<img src="./assets/icons/arcade.svg" alt="Launch the game !" />
 				</button>
-				<button onClick={() => setSettingsWindow(true)}>
+				<button onClick={() => setSettingsWindow(!settingsWindow)}>
 					<img src="./assets/icons/settings.svg" alt="Settings" />
 				</button>
 			</div>

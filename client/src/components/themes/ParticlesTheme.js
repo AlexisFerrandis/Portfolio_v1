@@ -2,8 +2,6 @@ import React from "react";
 
 class ParticlesTheme extends React.Component {
 	componentDidMount() {
-		// document.getElementById("desktopLogo").style.filter = "invert(100%) sepia(34%) saturate(4716%) hue-rotate(207deg) brightness(95%) contrast(97%)";
-
 		const canvas = this.refs.particlesCanvas;
 		const ctx = canvas.getContext("2d");
 		const img = this.refs.img;
@@ -16,21 +14,19 @@ class ParticlesTheme extends React.Component {
 
 		img.onload = () => {
 			let particlesArray;
+			canvas.style.background = "#0d47a1";
 
-			// Personnalisation
-			/* background */ canvas.style.background = "white";
-			/* mouse radius */ let mouseRadius = 120;
-			/* particle color */ let particleColor = "rgba(0, 0, 0, 1)";
-			/* particle size */ let particleSize = 2;
-			/* stroke color */ let strokeColor = "0, 0, 0,";
-			/* number of particles */ let PartclesNumber = 200;
-			/* particle speed */ let particleSpeed = 5;
+			// let mouseRadius = 120;
+			// let particleColor = "#64b5f6";
+			// let particleSize = 3;
+			// let strokeColor = "100, 181, 246,";
+			// let PartclesNumber = 200;
+			// let particleSpeed = 4;
 
-			// Get mouse position
 			let mouse = {
 				x: null,
 				y: null,
-				radius: (canvas.height / mouseRadius) * (canvas.width / mouseRadius),
+				radius: (canvas.height / 120) * (canvas.width / 120),
 			};
 
 			window.addEventListener("mousemove", function (event) {
@@ -38,7 +34,6 @@ class ParticlesTheme extends React.Component {
 				mouse.y = event.y;
 			});
 
-			// Create particles
 			class Particle {
 				constructor(x, y, directionX, directionY, size, color) {
 					this.x = x;
@@ -48,14 +43,12 @@ class ParticlesTheme extends React.Component {
 					this.size = size;
 					this.color = color;
 				}
-				//method to draw individual particle
 				draw() {
 					ctx.beginPath();
 					ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-					ctx.fillStyle = particleColor;
+					ctx.fillStyle = "#64b5f6";
 					ctx.fill();
 				}
-				//check positions, draw and move the particles
 				update() {
 					if (this.x > canvas.width || this.x < 0) {
 						this.directionX = -this.directionX;
@@ -64,7 +57,6 @@ class ParticlesTheme extends React.Component {
 						this.directionY = -this.directionY;
 					}
 
-					// Check collision detection
 					let dx = mouse.x - this.x;
 					let dy = mouse.y - this.y;
 					let distance = Math.sqrt(dx * dx + dy * dy);
@@ -82,31 +74,27 @@ class ParticlesTheme extends React.Component {
 							this.y -= 10;
 						}
 					}
-					// Move particle
 					this.x += this.directionX;
 					this.y += this.directionY;
-					// Draw particle
 					this.draw();
 				}
 			}
 
-			// Create particle array
 			function init() {
 				particlesArray = [];
 				let numberOfParticles = (canvas.height * canvas.width) / 100000;
-				for (let i = 0; i < numberOfParticles * 2 + PartclesNumber; i++) {
-					let size = Math.random() * 5 + particleSize;
+				for (let i = 0; i < numberOfParticles * 2 + 200; i++) {
+					let size = Math.random() * 5 + 3;
 					let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
 					let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-					let directionX = Math.random() * particleSpeed - 2.5;
-					let directionY = Math.random() * particleSpeed - 2.5;
-					let color = particleColor;
+					let directionX = Math.random() * 4 - 2.5;
+					let directionY = Math.random() * 4 - 2.5;
+					let color = "#64b5f6";
 
 					particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
 				}
 			}
 
-			// Check if particles are close enough to draw a line between them
 			function connect() {
 				let opacityValue = 1;
 				for (let a = 0; a < particlesArray.length; a++) {
@@ -115,7 +103,7 @@ class ParticlesTheme extends React.Component {
 
 						if (distance < (canvas.width / 7) * (canvas.height / 7)) {
 							opacityValue = 1 - distance / 20000;
-							ctx.strokeStyle = "rgba(" + strokeColor + opacityValue + " )";
+							ctx.strokeStyle = "rgba(100, 181, 246," + opacityValue + " )";
 							ctx.lineWidth = 1;
 							ctx.beginPath();
 							ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -126,7 +114,6 @@ class ParticlesTheme extends React.Component {
 				}
 			}
 
-			// Animation loop
 			function animate() {
 				requestAnimationFrame(animate);
 				ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -137,7 +124,6 @@ class ParticlesTheme extends React.Component {
 				connect();
 			}
 
-			// Resize event
 			window.addEventListener("resize", function () {
 				canvas.width = innerWidth;
 				canvas.height = innerHeight;
@@ -145,7 +131,6 @@ class ParticlesTheme extends React.Component {
 				init();
 			});
 
-			//mouse out event {
 			window.addEventListener("mouseout", function () {
 				mouse.x = undefined;
 				mouse.y = undefined;
@@ -160,7 +145,7 @@ class ParticlesTheme extends React.Component {
 		return (
 			<div className="desktop-theme__particles">
 				<canvas ref="particlesCanvas" id="particlesCanvas" />
-				<img ref="img" src="./assets/logo/af-logo.svg" alt="Alexis Ferrandis's logo" className="hidden" />
+				<img ref="img" src="./assets/logo/af-black-logo.svg" alt="Alexis Ferrandis's logo" className="logo" />
 			</div>
 		);
 	}

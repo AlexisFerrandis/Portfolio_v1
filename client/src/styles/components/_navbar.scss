@@ -8,13 +8,6 @@
 	@extend .glass-background;
 	border-radius: 7px;
 	z-index: 99;
-	@media screen and (max-width: 900px) {
-		flex-direction: column;
-		left: 15px;
-		bottom: inherit;
-		top: 50%;
-		transform: translateY(-50%);
-	}
 	button {
 		background: transparent;
 		margin: 3px 5px;

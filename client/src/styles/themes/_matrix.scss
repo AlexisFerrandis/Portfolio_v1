@@ -1,11 +1,13 @@
 .desktop-theme__matrix {
+	animation: fade $theme-animation both;
 	#matrixCanvas {
 		background: black;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
-	.hidden {
-		display: none;
+	.logo {
+		@extend .desktop-logo;
+		filter: invert(11%) sepia(64%) saturate(2434%) hue-rotate(204deg) brightness(101%) contrast(97%);
 	}
 }

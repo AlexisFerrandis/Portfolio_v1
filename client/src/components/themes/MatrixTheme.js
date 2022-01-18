@@ -2,14 +2,12 @@ import React from "react";
 
 class MatrixTheme extends React.Component {
 	componentDidMount() {
-		// document.getElementById("desktopLogo").style.filter = "invert(100%) sepia(34%) saturate(4716%) hue-rotate(207deg) brightness(95%) contrast(97%)";
-
 		const canvas = this.refs.matrixCanvas;
 		const ctx = canvas.getContext("2d");
 		const img = this.refs.img;
 
 		canvas.width = window.innerWidth + 1000;
-		canvas.height = window.innerHeight;
+		canvas.height = window.innerHeight + 200;
 
 		let gradient = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
 		gradient.addColorStop(0, "#1e88e5");
@@ -94,7 +92,7 @@ class MatrixTheme extends React.Component {
 		return (
 			<div className="desktop-theme__matrix">
 				<canvas ref="matrixCanvas" id="matrixCanvas" />
-				<img ref="img" src="./assets/logo/af-logo.svg" alt="Alexis Ferrandis's logo" className="hidden" />
+				<img ref="img" src="./assets/logo/af-black-logo.svg" alt="Alexis Ferrandis's logo" className="logo" />
 			</div>
 		);
 	}

@@ -1,4 +1,5 @@
 .desktop-theme__cloud {
+	animation: fade $theme-animation both;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -40,6 +41,10 @@
 			bottom: 35px;
 		}
 	}
+	.logo {
+		@extend .desktop-logo;
+		filter: invert(100%);
+	}
 }
 
 @keyframes cloud-movement {
@@ -56,20 +61,5 @@
 	}
 	100% {
 		background-position-x: -1000px;
-	}
-}
-
-.desktop-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	pointer-events: none;
-	user-select: none;
-	img {
-		object-fit: cover;
-		filter: invert(100%);
-		width: 300px;
-		height: 300px;
 	}
 }
