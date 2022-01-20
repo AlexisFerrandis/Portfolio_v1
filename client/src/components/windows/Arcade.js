@@ -12,6 +12,10 @@ const Arcade = (props) => {
 					<img src="./assets/img/arcade/2048/2048.png" alt="2048" />
 					<p>2048</p>
 				</div>
+				<div className="arcade-illustration">
+					<img src="./assets/img/arcade/snake/snake.jpg" alt="snake" />
+					<p>Snake</p>
+				</div>
 			</div>
 		</>
 	);

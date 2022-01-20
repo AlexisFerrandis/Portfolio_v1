@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+#netfloux {
+	width: 720px;
+	height: 800px;
+	background-color: #141414;
+	color: white;
+	.netfloux-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		-webkit-box-shadow: inset 0px 50px 20px -15px rgba(0, 0, 0, 0.6);
+		box-shadow: inset 0px 50px 20px -15px rgba(0, 0, 0, 0.6);
+		nav ul {
+			display: flex;
+			align-items: center;
+			padding-top: 25px;
+			li {
+				font-family: "Roboto", sans-serif;
+				img {
+					width: 150px;
+				}
+			}
+			a {
+				color: $netfloux-font;
+				margin: 0 10px;
+			}
+			a.nav-active {
+				color: white;
+			}
+		}
+		.profil {
+			padding: 25px 15px 0 0;
+			.picture {
+				width: 25px;
+			}
+			.open {
+				width: 15px;
+				filter: invert(70%);
+				margin: 0 0 5px 5px;
+			}
+		}
+	}
+	.home-front {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.home-content {
+		min-height: 500px;
+		h4 {
+			font-size: 1.5em;
+			font-family: "Roboto", sans-serif;
+		}
+		.top-ten,
+		.new {
+			position: relative;
+			height: 500px;
+
+			// removing scrollbar
+			::-webkit-scrollbar {
+				width: 1px;
+				height: 1px;
+			}
+			::-webkit-scrollbar-thumb {
+				background: $netfloux-background;
+				border-radius: 0px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: $netfloux-background;
+			}
+			::-webkit-scrollbar-track {
+				background: $netfloux-background;
+				border-radius: 0px;
+				box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+			}
+			h4 {
+				margin: 20px 0 0 15px;
+			}
+			.preview-container {
+				position: absolute;
+				top: -150px;
+				left: -40px;
+				width: 260px;
+				height: 700px;
+				overflow-y: scroll;
+				transform: rotate(-90deg) translateY(280px);
+				.card-preview {
+					position: relative;
+					display: flex;
+					overflow: visible;
+					width: 150px;
+					height: 240px;
+					margin-top: 30px;
+					transform: rotate(90deg) translateY(-50px);
+					span {
+						position: absolute;
+						left: -95px;
+						top: -65px;
+						font-size: 300px;
+						font-weight: 800;
+						z-index: -1;
+						color: black;
+						-webkit-text-stroke: 2px $netfloux-font;
+						font-family: "Roboto", sans-serif;
+					}
+					img {
+						width: 150px;
+						height: 225px;
+						object-fit: cover;
+						-webkit-box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.9);
+						box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.9);
+					}
+				}
+			}
+		}
+		.new {
+			top: -140px;
+			.preview-container {
+				top: -175px;
+				left: -70px;
+
+				.card-preview {
+					height: 230px;
+				}
+			}
+		}
+	}
+	.form-component {
+		padding-left: 15px;
+		form {
+			display: flex;
+			img {
+				width: 20px;
+				height: 20px;
+				filter: invert(62%);
+				margin-right: 7px;
+			}
+			input {
+				background-color: transparent;
+				border-bottom: 1px solid $netfloux-font;
+			}
+		}
+	}
+}

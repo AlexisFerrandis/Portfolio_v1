@@ -18,6 +18,7 @@ import BubblesTheme from "../themes/BubblesTheme";
 
 import FloppyBird from "../arcade/FloppyBird";
 import TwoOFourHeight from "../arcade/TwoOFourHeight";
+import Netfloux from "../projects/perso/netfloux/Netfloux";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -110,6 +111,7 @@ const Navbar = () => {
 					</section>
 				</Draggable>
 			)}
+			{/* arcade absolute */}
 			<div className="arcade-display">
 				{floppyBirdWindow && (
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -127,6 +129,15 @@ const Navbar = () => {
 						</section>
 					</Draggable>
 				)}
+			</div>
+			{/* project absolute */}
+			<div className="project-display">
+				<Draggable defaultPosition={{ x: 0, y: 0 }}>
+					<section className="window" id="netfloux">
+						<Header title="Netfloux" />
+						<Netfloux />
+					</section>
+				</Draggable>
 			</div>
 		</>
 	);
