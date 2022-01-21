@@ -18,6 +18,7 @@ import BubblesTheme from "../themes/BubblesTheme";
 
 import FloppyBird from "../arcade/FloppyBird";
 import TwoOFourHeight from "../arcade/TwoOFourHeight";
+
 import Netfloux from "../projects/perso/netfloux/Netfloux";
 
 const Navbar = () => {
@@ -38,6 +39,10 @@ const Navbar = () => {
 
 	const [themeSelection, setThemeSelection] = useState("default");
 
+	const [netflouxWindow, setNetflouxWindow] = useState(false);
+	const [netflouxContent, setNetflouxContent] = useState(true);
+
+	// arcade
 	const [floppyBirdWindow, setFloppyBirdWindow] = useState(false);
 	const [floppyBirdContent, setFloppyBirdContent] = useState(true);
 
@@ -80,10 +85,10 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{portfolioWindow && (
-				<Draggable defaultPosition={{ x: 1032, y: 35 }}>
+				<Draggable defaultPosition={{ x: 2, y: 35 }}>
 					<section className="window" id="portfolioWindow">
 						<Header title="Portfolio" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
-						{portfolioContent && <Portfolio />}
+						{portfolioContent && <Portfolio netfloux={setNetflouxWindow} />}
 					</section>
 				</Draggable>
 			)}
@@ -104,14 +109,14 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{arcadeWindow && (
-				<Draggable defaultPosition={{ x: 1032, y: 105 }}>
+				<Draggable defaultPosition={{ x: 90, y: 105 }}>
 					<section className="window" id="arcadeWindow">
 						<Header title="Arcade" redBtnRef={setArcadeWindow} yellowBtnRef={setArcadeContent} greenBtnRef={setArcadeContent} />
 						{arcadeContent && <Arcade floppyBird={setFloppyBirdWindow} twoOFourHeight={setTwoOFourHeightWindow} />}
 					</section>
 				</Draggable>
 			)}
-			{/* arcade absolute */}
+			{/* arcade */}
 			<div className="arcade-display">
 				{floppyBirdWindow && (
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -130,15 +135,17 @@ const Navbar = () => {
 					</Draggable>
 				)}
 			</div>
-			{/* project absolute */}
-			<div className="project-display">
-				<Draggable defaultPosition={{ x: 0, y: 0 }}>
-					<section className="window" id="netfloux">
-						<Header title="Netfloux" />
-						<Netfloux />
-					</section>
-				</Draggable>
-			</div>
+			{/* project */}
+			{netflouxWindow && (
+				<div className="project-display">
+					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+						<section className="window" id="netfloux">
+							<Header title="Netfloux" redBtnRef={setNetflouxWindow} yellowBtnRef={setNetflouxContent} greenBtnRef={setNetflouxContent} />
+							{netflouxContent && <Netfloux />}
+						</section>
+					</Draggable>
+				</div>
+			)}
 		</>
 	);
 };

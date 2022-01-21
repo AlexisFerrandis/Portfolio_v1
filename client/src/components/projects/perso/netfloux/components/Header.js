@@ -17,10 +17,10 @@ const Header = () => {
 					<NavLink to="/netfloux/list" className={(nav) => (nav.isActive ? "nav-active" : "")}>
 						<li>Ma liste</li>
 					</NavLink>
-					<NavLink to="/netfloux/films" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+					<NavLink to="/netfloux/movies" className={(nav) => (nav.isActive ? "nav-active" : "")}>
 						<li>Films</li>
 					</NavLink>
-					<NavLink to="/netfloux/series" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+					<NavLink to="/netfloux/shows" className={(nav) => (nav.isActive ? "nav-active" : "")}>
 						<li>Séries</li>
 					</NavLink>
 				</ul>
