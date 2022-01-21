@@ -61,19 +61,19 @@ const Navbar = () => {
 			</div>
 			<div className="navbar">
 				<button onClick={() => setProfilWindow(!profilWindow)}>
-					<img src="./assets/icons/profil.svg" alt="Alexis's profil" />
+					<img src="../assets/icons/profil.svg" alt="Profil" />
 				</button>
 				<button onClick={() => setPortfolioWindow(!portfolioWindow)}>
-					<img src="./assets/icons/folder.svg" alt="Alexis's portfolio" />
+					<img src="../assets/icons/folder.svg" alt="Portfolio" />
 				</button>
 				<button onClick={() => setContactWindow(!contactWindow)}>
-					<img src="./assets/icons/contact.svg" alt="Contact" />
+					<img src="../assets/icons/contact.svg" alt="Contact" />
 				</button>
 				<button onClick={() => setThemesWindow(!themesWindow)}>
-					<img src="./assets/icons/themes.svg" alt="Themes selection" />
+					<img src="../assets/icons/themes.svg" alt="Themes" />
 				</button>
 				<button onClick={() => setArcadeWindow(!arcadeWindow)}>
-					<img src="./assets/icons/arcade.svg" alt="Launch the game !" />
+					<img src="../assets/icons/arcade.svg" alt="Launch the game !" />
 				</button>
 			</div>
 			{profilWindow && (

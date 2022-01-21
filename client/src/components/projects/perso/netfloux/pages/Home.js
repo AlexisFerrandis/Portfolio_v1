@@ -30,7 +30,7 @@ const Home = () => {
 				<div className="new">
 					<h4>Nouveautés</h4>
 					<div className="preview-container">
-						{moviesShowsData.slice(10, 20).map((movieShow, index) => (
+						{moviesShowsData.slice(10, 20).map((movieShow) => (
 							<CardPreview key={movieShow.id} infos={movieShow} />
 						))}
 					</div>

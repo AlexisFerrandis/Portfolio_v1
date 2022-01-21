@@ -42,15 +42,16 @@
 			text-align: justify;
 			margin-top: 1em;
 			h3 {
-				color: $color-3;
+				color: $color-2;
 				margin-bottom: 0.6em;
-				text-decoration: underline;
+				user-select: none;
 			}
 			p {
 				color: $color-secondary;
+				user-select: none;
 			}
 			a {
-				color: $color-3;
+				color: $color-2;
 				text-decoration: underline;
 			}
 			.skills {
@@ -64,20 +65,32 @@
 					width: 30px;
 					height: 30px;
 				}
-				#dataBaseInfo {
-					position: absolute;
-					right: 9%;
-					top: 20px;
-					background-color: #0d48a1ef;
-					padding: 5px;
-					border-radius: 7px;
-					font-size: 0.8em;
-					opacity: 0;
-					transition: $mid-animation;
-					user-select: none;
+				.database {
+					position: relative;
+					overflow: visible;
+					&::after {
+						content: "SQL & MongoDb";
+						position: absolute;
+						left: -55px;
+						opacity: 0;
+						width: 130px;
+						height: 32px;
+						padding-top: 5px;
+						border-radius: 7px;
+						text-align: center;
+						background-color: $color-primary;
+						transition: $short-animation;
+						z-index: 3;
+					}
 					&:hover {
-						opacity: 1;
-						transform: translateY(32px);
+						&::after {
+							top: 0;
+							left: -55px;
+							width: 130px;
+							height: 32px;
+							opacity: 0.95;
+							transform: translateY(12px);
+						}
 					}
 				}
 			}

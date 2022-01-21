@@ -36,8 +36,8 @@ const Portfolio = (props) => {
 			{proDisplay && (
 				<div className="content">
 					<div className="portfolio-illustration">
-						<img src="./assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" />
-						<p>Repaire de Bacchus</p>
+						<img src="../assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" />
+						<p>Le Repaire de Bacchus</p>
 					</div>
 				</div>
 			)}
@@ -46,7 +46,7 @@ const Portfolio = (props) => {
 					<BrowserRouter>
 						<NavLink to="/netfloux">
 							<div className="portfolio-illustration" onClick={() => props.netfloux(true)}>
-								<img src="./assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
+								<img src="../assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
 								<p>Netfloux</p>
 							</div>
 						</NavLink>
