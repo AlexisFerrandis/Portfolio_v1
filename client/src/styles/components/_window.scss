@@ -1,4 +1,5 @@
 .window {
+	animation: fade $short-animation forwards;
 	position: absolute;
 	min-width: 250px;
 	min-height: 35px;

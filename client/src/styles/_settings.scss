@@ -1,6 +1,9 @@
+// fonts
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+// settings
 *,
 *:before,
 *:after {
@@ -19,6 +22,7 @@ html {
 	background: linear-gradient(0deg, rgba(25, 118, 210, 1) 0%, rgba(13, 71, 161, 1) 100%);
 }
 
+// colors
 $color-primary: #0d47a1;
 $color-secondary: #e3f2fd;
 $color-tertiary: #1e88e5;
@@ -38,10 +42,21 @@ $green-button: #47d043;
 $netfloux-background: #141414;
 $netfloux-font: #818286;
 
+// animations
 $short-animation: 200ms;
 $mid-animation: 500ms;
 $theme-animation: 1234ms;
 
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// extensions
 .desktop-logo {
 	position: absolute;
 	top: 50%;
@@ -78,14 +93,5 @@ $theme-animation: 1234ms;
 		&:hover {
 			transform: scale(1.03);
 		}
-	}
-}
-
-@keyframes fade {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }

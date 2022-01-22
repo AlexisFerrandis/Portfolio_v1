@@ -39,12 +39,21 @@
 				justify-content: space-around;
 				text-align: left;
 				font-size: 1em;
-				label span {
-					color: $red-button;
+				label {
+					position: relative;
+					.error {
+						position: absolute;
+						bottom: -22px;
+						left: 22px;
+						color: $red-button;
+					}
+					span {
+						color: $red-button;
+					}
 				}
 				input {
 					padding: 5px;
-					margin: 0.5em 0 1.5em;
+					margin: 0.6em 0 1.5em;
 					background-color: $color-secondary;
 					border-radius: 7px;
 					font-family: "Ubuntu", sans-serif;
@@ -71,6 +80,16 @@
 						font-style: italic;
 					}
 				}
+			}
+			.message-sent {
+				position: absolute;
+				width: 100%;
+				left: 50%;
+				bottom: 145px;
+				transform: translateX(-50%);
+				color: $green-button;
+				animation: disapear 7000ms forwards;
+				opacity: 0.8;
 			}
 			.submit {
 				background: none;
@@ -113,5 +132,20 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes disapear {
+	0% {
+		opacity: 0.8;
+	}
+	5% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }

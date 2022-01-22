@@ -20,6 +20,8 @@ const Profil = (props) => {
 					<br />
 					<br />
 					Pour des missions en freelance, vous pouvez m'envoyer un <a href="mailto:alexisferrandis@protonmail.com">email</a>, ou visiter la page de contact.
+					<br />
+					Je réponds dans les 24h.
 				</p>
 			</div>
 			<div className="info">
