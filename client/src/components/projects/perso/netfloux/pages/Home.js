@@ -9,7 +9,7 @@ const Home = () => {
 
 	useEffect(() => {
 		axios
-			.get("https://api.themoviedb.org/3/trending/tv&movie/week?api_key=69e9da0151676aa7bed1af9ac280fe63&language=fr-FR")
+			.get("https://api.themoviedb.org/3/trending/tv&movie/week?api_key=&language=fr-FR")
 			.then((res) => setMoviesShowsData(res.data.results))
 			.catch((err) => console.log(err));
 	}, []);

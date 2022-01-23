@@ -51,6 +51,18 @@ const Portfolio = (props) => {
 							</div>
 						</NavLink>
 					</BrowserRouter>
+					<div className="portfolio-illustration">
+						<img src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
+						<p>Chatbot</p>
+					</div>
+					<div className="portfolio-illustration">
+						<img src="../assets/img/projects/mern/mern.jpg" alt="MERN social network" />
+						<p>Network</p>
+					</div>
+					<div className="portfolio-illustration">
+						<img src="../assets/img/projects/konsol/logo.png" alt="konsol" />
+						<p>KonSol</p>
+					</div>
 				</div>
 			)}
 		</div>

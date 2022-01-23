@@ -18,8 +18,13 @@
 				font-size: 0.9em;
 				transition: $short-animation;
 				&:hover {
-					-webkit-box-shadow: inset -5px 5px 20px 5px rgba(0, 0, 0, 0.2);
-					box-shadow: inset -5px 5px 20px 5px rgba(0, 0, 0, 0.2);
+					-webkit-box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+					box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+				}
+				&:focus {
+					transform: scale(0.99);
+					-webkit-box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.3);
+					box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.3);
 				}
 			}
 			img {

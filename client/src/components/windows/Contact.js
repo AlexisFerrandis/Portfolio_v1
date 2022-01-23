@@ -20,9 +20,9 @@ export const Contact = () => {
 			setNameError(false);
 			if (compagny.length < 24) {
 				setCompagnyError(false);
-				if (mail.length < 24 && (mail.length > 3) & /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)) {
+				if (mail.length < 24 && (mail.length > 6) & /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)) {
 					setMailError(false);
-					if (message.length < 300 && message.length > 3 && /^([\w-.]{3,300})$/.test(message)) {
+					if (message.length < 300 && message.length > 12 && /^([\w-.]{12,300})$/.test(message)) {
 						setMessageError(false);
 						return true;
 					} else {
@@ -101,7 +101,7 @@ export const Contact = () => {
 
 					<label htmlFor="message">
 						Message <span>*</span> :<br />
-						<textarea name="message" type="text" placeholder="Bonjour, serait-il possible de ..." minLength="300" maxLength="300" value={message} onChange={(e) => setMessage(e.target.value)} required />
+						<textarea name="message" type="text" placeholder="Bonjour, serait-il possible de ..." minLength="12" maxLength="300" value={message} onChange={(e) => setMessage(e.target.value)} required />
 						{messageError && <div className="error">Le message contient des erreurs</div>}
 					</label>
 					<br />

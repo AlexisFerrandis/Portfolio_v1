@@ -8,7 +8,7 @@ const Shows = () => {
 
 	useEffect(() => {
 		axios
-			.get("https://api.themoviedb.org/3/trending/tv/week?api_key=69e9da0151676aa7bed1af9ac280fe63&language=fr-FR&page=2")
+			.get("https://api.themoviedb.org/3/trending/tv/week?api_key=&language=fr-FR&page=2")
 			.then((res) => setShowsData(res.data.results))
 			.catch((err) => console.log(err));
 	}, []);
