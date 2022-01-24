@@ -19,7 +19,7 @@ import BubblesTheme from "../themes/BubblesTheme";
 import FloppyBird from "../arcade/FloppyBird";
 import TwoOFourHeight from "../arcade/TwoOFourHeight";
 
-import Netfloux from "../projects/perso/netfloux/Netfloux";
+// import Netfloux from "../projects/perso/netfloux/Netfloux";
 import Chatbot from "../projects/perso/chatbot/Chatbot";
 
 const Navbar = () => {
@@ -41,8 +41,8 @@ const Navbar = () => {
 	const [themeSelection, setThemeSelection] = useState("default");
 
 	// projects
-	const [netflouxWindow, setNetflouxWindow] = useState(false);
-	const [netflouxContent, setNetflouxContent] = useState(true);
+	// const [netflouxWindow, setNetflouxWindow] = useState(false);
+	// const [netflouxContent, setNetflouxContent] = useState(true);
 
 	const [chatbotWindow, setChatbotWindow] = useState(false);
 	const [chatbotContent, setChatbotContent] = useState(true);
@@ -113,12 +113,12 @@ const Navbar = () => {
 						}}
 					>
 						<Header title="Portfolio" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
-						{portfolioContent && <Portfolio netfloux={setNetflouxWindow} chatbot={setChatbotWindow} />}
+						{portfolioContent && <Portfolio chatbot={setChatbotWindow} />}
 					</section>
 				</Draggable>
 			)}
 			{contactWindow && (
-				<Draggable defaultPosition={{ x: 460, y: 35 }}>
+				<Draggable defaultPosition={{ x: 460, y: 35 }} cancel={"input, textArea"}>
 					<section
 						className="window"
 						id="contactWindow"
@@ -191,7 +191,7 @@ const Navbar = () => {
 				)}
 			</div>
 			{/* project */}
-			{netflouxWindow && (
+			{/* {netflouxWindow && (
 				<div className="project-display">
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
 						<section
@@ -206,10 +206,10 @@ const Navbar = () => {
 						</section>
 					</Draggable>
 				</div>
-			)}
+			)} */}
 			{chatbotWindow && (
 				<div className="project-display">
-					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+					<Draggable defaultPosition={{ x: 0, y: 0 }} cancel={"input"}>
 						<section
 							className="window"
 							id="chatbot"
@@ -217,7 +217,7 @@ const Navbar = () => {
 								handleZIndex(e);
 							}}
 						>
-							<Header title="Chatbot" redBtnRef={setChatbotWindow} yellowBtnRef={setChatbotContent} greenBtnRef={setChatbotContent} />
+							<Header title="T.bot" redBtnRef={setChatbotWindow} yellowBtnRef={setChatbotContent} greenBtnRef={setChatbotContent} />
 							{chatbotContent && <Chatbot />}
 						</section>
 					</Draggable>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+// import { BrowserRouter, NavLink } from "react-router-dom";
 import InfoBubble from "./InfoBubble";
 
 const Portfolio = (props) => {
@@ -67,16 +67,16 @@ const Portfolio = (props) => {
 			)}
 			{persoDisplay && (
 				<div className="content">
-					<BrowserRouter>
+					{/* <BrowserRouter>
 						<NavLink to="/netfloux">
 							<div className="portfolio-illustration" onClick={() => props.netfloux(true)}>
 								<img className="illustration-preview" src="../assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
 								<p>Netfloux</p>
 							</div>
 						</NavLink>
-					</BrowserRouter>
+					</BrowserRouter> */}
 					<div className="portfolio-illustration" onClick={() => props.chatbot(true)}>
-						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
+						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.jpg" alt="chatbot" />
 						<p>Chatbot</p>
 					</div>
 					<div className="portfolio-illustration">
@@ -119,6 +119,10 @@ const Portfolio = (props) => {
 								github={"https://github.com/AlexisFerrandis/kon-sol"}
 							/>
 						)}
+					</div>
+					<div className="portfolio-illustration">
+						<img className="illustration-preview" src="../assets/logo/af-logo.svg" alt="site personnel" />
+						<p>Af.com</p>
 					</div>
 				</div>
 			)}

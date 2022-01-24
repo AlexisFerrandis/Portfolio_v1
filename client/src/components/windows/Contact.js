@@ -81,13 +81,13 @@ export const Contact = () => {
 					<div>
 						<label htmlFor="name">
 							Nom <span>*</span> :<br />
-							<input name="name" type="text" minLength="3" maxLength="24" pattern="[a-z A-Z]{2,30}" value={name} onChange={(e) => setName(e.target.value)} required />
+							<input name="name" type="text" minLength="3" maxLength="24" pattern="[a-z A-Z]{3,24}" value={name} onChange={(e) => setName(e.target.value)} required />
 							{nameError && <div className="error">Nom invalide.</div>}
 						</label>
 						<br />
 						<label htmlFor="compagny">
 							Entreprise :<br />
-							<input name="compagny" type="text" maxLength="24" pattern="[a-z A-Z]{2,30}" value={compagny} onChange={(e) => setCompagny(e.target.value)} />
+							<input name="compagny" type="text" maxLength="24" pattern="[a-z A-Z]{2,24}" value={compagny} onChange={(e) => setCompagny(e.target.value)} />
 							{compagnyError && <div className="error">Le nom est invalide.</div>}
 						</label>
 						<br />

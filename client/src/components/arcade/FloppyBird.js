@@ -100,7 +100,7 @@ class FloppyBird extends React.Component {
 
 	render() {
 		return (
-			<div className="arcade__floppy-bird">
+			<div>
 				<h5>Floppy Bird</h5>
 				<canvas ref="floppyBirdCanvas" id="floppyBirdCanvas" width="360" height="650"></canvas>
 				<img ref="img" src="../assets/icons/loader.svg" alt="Alexis Ferrandis's logo" className="hidden" />

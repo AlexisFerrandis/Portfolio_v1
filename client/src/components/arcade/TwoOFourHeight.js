@@ -218,7 +218,7 @@ class TwoOFourHeight extends React.Component {
 
 	render() {
 		return (
-			<div className="arcade__2048">
+			<div className="arcade--2048">
 				<div className="wrapper">
 					<div className="grid">
 						<div className="cell"></div>
