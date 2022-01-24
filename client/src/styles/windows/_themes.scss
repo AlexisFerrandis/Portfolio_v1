@@ -5,7 +5,7 @@
 		flex-wrap: wrap;
 		padding: 15px;
 		.theme-illustration {
-			@extend .illustration-preview;
+			@extend .illustration-container;
 		}
 	}
 }

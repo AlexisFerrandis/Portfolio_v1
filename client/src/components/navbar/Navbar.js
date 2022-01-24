@@ -20,6 +20,7 @@ import FloppyBird from "../arcade/FloppyBird";
 import TwoOFourHeight from "../arcade/TwoOFourHeight";
 
 import Netfloux from "../projects/perso/netfloux/Netfloux";
+import Chatbot from "../projects/perso/chatbot/Chatbot";
 
 const Navbar = () => {
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -39,8 +40,12 @@ const Navbar = () => {
 
 	const [themeSelection, setThemeSelection] = useState("default");
 
+	// projects
 	const [netflouxWindow, setNetflouxWindow] = useState(false);
 	const [netflouxContent, setNetflouxContent] = useState(true);
+
+	const [chatbotWindow, setChatbotWindow] = useState(false);
+	const [chatbotContent, setChatbotContent] = useState(true);
 
 	// arcade
 	const [floppyBirdWindow, setFloppyBirdWindow] = useState(false);
@@ -48,6 +53,14 @@ const Navbar = () => {
 
 	const [twoOFourHeightWindow, setTwoOFourHeightWindow] = useState(false);
 	const [twoOFourHeightContent, setTwoOFourHeightContent] = useState(true);
+
+	const handleZIndex = (e) => {
+		const windows = document.querySelectorAll(".window");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 0;
+		}
+		e.target.closest(".window").style.zIndex = 1;
+	};
 
 	return (
 		<>
@@ -77,8 +90,14 @@ const Navbar = () => {
 				</button>
 			</div>
 			{profilWindow && (
-				<Draggable defaultPosition={{ x: 95, y: 35 }}>
-					<section className="window" id="profilWindow">
+				<Draggable positionOffset={{ x: "10%", y: "10%" }}>
+					<section
+						className="window"
+						id="profilWindow"
+						onClick={(e) => {
+							handleZIndex(e);
+						}}
+					>
 						<Header title="Profil" redBtnRef={setProfilWindow} yellowBtnRef={setProfilContent} greenBtnRef={setProfilContent} />
 						{profilContent && <Profil contactBtn={setContactWindow} />}
 					</section>
@@ -86,15 +105,27 @@ const Navbar = () => {
 			)}
 			{portfolioWindow && (
 				<Draggable defaultPosition={{ x: 2, y: 35 }}>
-					<section className="window" id="portfolioWindow">
+					<section
+						className="window"
+						id="portfolioWindow"
+						onClick={(e) => {
+							handleZIndex(e);
+						}}
+					>
 						<Header title="Portfolio" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
-						{portfolioContent && <Portfolio netfloux={setNetflouxWindow} />}
+						{portfolioContent && <Portfolio netfloux={setNetflouxWindow} chatbot={setChatbotWindow} />}
 					</section>
 				</Draggable>
 			)}
 			{contactWindow && (
 				<Draggable defaultPosition={{ x: 460, y: 35 }}>
-					<section className="window" id="contactWindow">
+					<section
+						className="window"
+						id="contactWindow"
+						onClick={(e) => {
+							handleZIndex(e);
+						}}
+					>
 						<Header title="Contact" redBtnRef={setContactWindow} yellowBtnRef={setContactContent} greenBtnRef={setContactContent} />
 						{contactContent && <Contact />}
 					</section>
@@ -102,7 +133,13 @@ const Navbar = () => {
 			)}
 			{themesWindow && (
 				<Draggable defaultPosition={{ x: 462, y: 35 }}>
-					<section className="window" id="themesWindow">
+					<section
+						className="window"
+						id="themesWindow"
+						onClick={(e) => {
+							handleZIndex(e);
+						}}
+					>
 						<Header title="Themes" redBtnRef={setThemesWindow} yellowBtnRef={setThemesContent} greenBtnRef={setThemesContent} />
 						{themesContent && <Themes themeSelected={setThemeSelection} />}
 					</section>
@@ -110,7 +147,13 @@ const Navbar = () => {
 			)}
 			{arcadeWindow && (
 				<Draggable defaultPosition={{ x: 90, y: 105 }}>
-					<section className="window" id="arcadeWindow">
+					<section
+						className="window"
+						id="arcadeWindow"
+						onClick={(e) => {
+							handleZIndex(e);
+						}}
+					>
 						<Header title="Arcade" redBtnRef={setArcadeWindow} yellowBtnRef={setArcadeContent} greenBtnRef={setArcadeContent} />
 						{arcadeContent && <Arcade floppyBird={setFloppyBirdWindow} twoOFourHeight={setTwoOFourHeightWindow} />}
 					</section>
@@ -120,7 +163,13 @@ const Navbar = () => {
 			<div className="arcade-display">
 				{floppyBirdWindow && (
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
-						<section className="window" id="floppyBird">
+						<section
+							className="window"
+							id="floppyBird"
+							onClick={(e) => {
+								handleZIndex(e);
+							}}
+						>
 							<Header title="FloppyBird" redBtnRef={setFloppyBirdWindow} yellowBtnRef={setFloppyBirdContent} greenBtnRef={setFloppyBirdContent} />
 							{floppyBirdContent && <FloppyBird />}
 						</section>
@@ -128,7 +177,13 @@ const Navbar = () => {
 				)}
 				{twoOFourHeightWindow && (
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
-						<section className="window" id="twoOFourHeight">
+						<section
+							className="window"
+							id="twoOFourHeight"
+							onClick={(e) => {
+								handleZIndex(e);
+							}}
+						>
 							<Header title="2048" redBtnRef={setTwoOFourHeightWindow} yellowBtnRef={setTwoOFourHeightContent} greenBtnRef={setTwoOFourHeightContent} />
 							{twoOFourHeightContent && <TwoOFourHeight />}
 						</section>
@@ -139,9 +194,31 @@ const Navbar = () => {
 			{netflouxWindow && (
 				<div className="project-display">
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
-						<section className="window" id="netfloux">
+						<section
+							className="window"
+							id="netfloux"
+							onClick={(e) => {
+								handleZIndex(e);
+							}}
+						>
 							<Header title="Netfloux" redBtnRef={setNetflouxWindow} yellowBtnRef={setNetflouxContent} greenBtnRef={setNetflouxContent} />
 							{netflouxContent && <Netfloux />}
+						</section>
+					</Draggable>
+				</div>
+			)}
+			{chatbotWindow && (
+				<div className="project-display">
+					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+						<section
+							className="window"
+							id="chatbot"
+							onClick={(e) => {
+								handleZIndex(e);
+							}}
+						>
+							<Header title="Chatbot" redBtnRef={setChatbotWindow} yellowBtnRef={setChatbotContent} greenBtnRef={setChatbotContent} />
+							{chatbotContent && <Chatbot />}
 						</section>
 					</Draggable>
 				</div>

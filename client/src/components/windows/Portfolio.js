@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter, NavLink } from "react-router-dom";
+import InfoBubble from "./InfoBubble";
 
 const Portfolio = (props) => {
 	const [proDisplay, setProDisplay] = useState(true);
 	const [persoDisplay, setPersoDisplay] = useState(false);
+
+	const [bacchusInfoBubble, setBacchusInfoBubble] = useState(false);
+	const [networkInfoBubble, setNetworkInfoBubble] = useState(false);
+	const [konsolInfoBubble, setKonSolInfoBubble] = useState(false);
 
 	return (
 		<div className="content">
@@ -36,8 +41,27 @@ const Portfolio = (props) => {
 			{proDisplay && (
 				<div className="content">
 					<div className="portfolio-illustration">
-						<img src="../assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" />
+						<img className="illustration-preview" src="../assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" onClick={() => setBacchusInfoBubble(!bacchusInfoBubble)} />
 						<p>Le Repaire de Bacchus</p>
+						{bacchusInfoBubble && (
+							<InfoBubble
+								infos={
+									<h5>
+										Développement
+										<br />
+										Intégration
+										<br />
+										SEO
+										<br />
+										Animations
+										<br />
+										Responsive
+									</h5>
+								}
+								github={"https://github.com/AlexisFerrandis/Bacchus-web-3.0"}
+								link={"https://www.lerepairedebacchus.com/"}
+							/>
+						)}
 					</div>
 				</div>
 			)}
@@ -46,22 +70,55 @@ const Portfolio = (props) => {
 					<BrowserRouter>
 						<NavLink to="/netfloux">
 							<div className="portfolio-illustration" onClick={() => props.netfloux(true)}>
-								<img src="../assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
+								<img className="illustration-preview" src="../assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
 								<p>Netfloux</p>
 							</div>
 						</NavLink>
 					</BrowserRouter>
-					<div className="portfolio-illustration">
-						<img src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
+					<div className="portfolio-illustration" onClick={() => props.chatbot(true)}>
+						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
 						<p>Chatbot</p>
 					</div>
 					<div className="portfolio-illustration">
-						<img src="../assets/img/projects/mern/mern.jpg" alt="MERN social network" />
+						<img className="illustration-preview" src="../assets/img/projects/mern/mern.jpg" alt="MERN social network" onClick={() => setNetworkInfoBubble(!networkInfoBubble)} />
 						<p>Network</p>
+						{networkInfoBubble && (
+							<InfoBubble
+								infos={
+									<h5>
+										React
+										<br />
+										Mongo
+										<br />
+										Express
+										<br />
+										Node
+										<br />
+										Redux
+										<br />
+									</h5>
+								}
+								github={"https://github.com/AlexisFerrandis/Social-Network-MERN"}
+							/>
+						)}
 					</div>
 					<div className="portfolio-illustration">
-						<img src="../assets/img/projects/konsol/logo.png" alt="konsol" />
+						<img className="illustration-preview" src="../assets/img/projects/konsol/logo.png" alt="konsol" onClick={() => setKonSolInfoBubble(!konsolInfoBubble)} />
 						<p>KonSol</p>
+						{konsolInfoBubble && (
+							<InfoBubble
+								infos={
+									<h5>
+										Design
+										<br />
+										Canvas
+										<br />
+										Audio
+									</h5>
+								}
+								github={"https://github.com/AlexisFerrandis/kon-sol"}
+							/>
+						)}
 					</div>
 				</div>
 			)}

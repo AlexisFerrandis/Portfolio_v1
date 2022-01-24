@@ -5,7 +5,7 @@
 		flex-wrap: wrap;
 		padding: 15px;
 		.arcade-illustration {
-			@extend .illustration-preview;
+			@extend .illustration-container;
 		}
 	}
 }

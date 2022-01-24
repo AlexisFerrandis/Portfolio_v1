@@ -23,7 +23,7 @@
 				color: $color-secondary;
 			}
 			.portfolio-illustration {
-				@extend .illustration-preview;
+				@extend .illustration-container;
 			}
 		}
 	}

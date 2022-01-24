@@ -16,10 +16,10 @@ const Profil = (props) => {
 					Bienvenue sur mon portfolio,
 					<br />
 					<br />
-					Développeur web indépendant passionné, je fais preuve de créativité pour développer des applications authentiques et originales.
+					En tant que développeur web indépendant, je fais preuve de créativité pour développer des applications authentiques et originales.
 					<br />
 					<br />
-					Pour des missions en freelance, vous pouvez m'envoyer un <a href="mailto:alexisferrandis@protonmail.com">email</a>, ou visiter la page de contact.
+					Pour des missions en freelance, vous pouvez m'envoyer un <a href="mailto:alexisferrandis@protonmail.com">email,</a> ou visiter la page de contact.
 					<br />
 					Je réponds dans les 24h.
 				</p>
