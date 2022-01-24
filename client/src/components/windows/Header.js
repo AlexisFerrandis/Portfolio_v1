@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, NavLink } from "react-router-dom";
 
 const Header = (props) => {
+	// Get specified window
 	return (
 		<div>
 			<div className="header">

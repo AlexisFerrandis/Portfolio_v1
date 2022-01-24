@@ -2,6 +2,7 @@ import React from "react";
 
 class TwoOFourHeight extends React.Component {
 	componentDidMount() {
+		// Initialise grid
 		const grid = {
 			gridElement: document.getElementsByClassName("grid")[0],
 			cells: [],
@@ -30,6 +31,8 @@ class TwoOFourHeight extends React.Component {
 				number.spawn();
 				this.playable = true;
 			},
+
+			// Add random cell & push color
 			randomEmptyCellIndex: function () {
 				let emptyCells = [];
 
@@ -93,6 +96,7 @@ class TwoOFourHeight extends React.Component {
 
 				this.playable = false;
 
+				// Directions
 				const roots = this.directionRoots[direction];
 				let increment = direction === "RIGHT" || direction === "DOWN" ? -1 : 1;
 				increment *= direction === "UP" || direction === "DOWN" ? 4 : 1;
@@ -123,6 +127,7 @@ class TwoOFourHeight extends React.Component {
 						}
 					}
 				}
+				// Game over
 				setTimeout(function () {
 					if (number.spawn()) {
 						grid.playable = true;
@@ -133,6 +138,7 @@ class TwoOFourHeight extends React.Component {
 			},
 		};
 
+		// Spawning
 		const number = {
 			numbers: [],
 			getElements: function () {
@@ -166,6 +172,7 @@ class TwoOFourHeight extends React.Component {
 
 				return true;
 			},
+			// Cell direction
 			moveTo: function (fromCell, toCell) {
 				const number = fromCell.number;
 
@@ -195,6 +202,7 @@ class TwoOFourHeight extends React.Component {
 
 		grid.init();
 
+		// Listener
 		document.addEventListener("keyup", function (e) {
 			let direction = null;
 

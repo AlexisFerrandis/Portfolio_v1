@@ -14,6 +14,7 @@ class MatrixTheme extends React.Component {
 		gradient.addColorStop(1, "#0d47a1");
 
 		img.onload = () => {
+			// Set char
 			class Symbol {
 				constructor(x, y, fontSize, canvasHeight) {
 					this.characters = "ゝゞぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをん123456789";
@@ -23,6 +24,7 @@ class MatrixTheme extends React.Component {
 					this.text = "";
 					this.canvasHeight = canvasHeight;
 				}
+				// Draw individual char
 				draw(context) {
 					this.text = this.characters.charAt(Math.floor(Math.random() * this.characters.length));
 					context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
@@ -35,6 +37,7 @@ class MatrixTheme extends React.Component {
 			}
 
 			class Effect {
+				// Handle animation
 				constructor(canvasWidth, canvasHeight) {
 					this.canvasWidth = canvasWidth;
 					this.canvasHeight = canvasHeight;
@@ -63,6 +66,7 @@ class MatrixTheme extends React.Component {
 			const nextFrame = 1000 / fps;
 			let timer = 0;
 
+			// Animation loop
 			(function animate(timeStamp) {
 				const deltaTime = timeStamp - lastTime;
 				lastTime = timeStamp;
@@ -80,6 +84,7 @@ class MatrixTheme extends React.Component {
 				requestAnimationFrame(animate);
 			})(0);
 
+			// Listener
 			window.addEventListener("resize", function () {
 				this.canvasWidth = window.innerWidth;
 				this.canvasHeight = window.innerHeight;

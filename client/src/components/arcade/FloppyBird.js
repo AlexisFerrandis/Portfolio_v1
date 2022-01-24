@@ -18,6 +18,7 @@ class FloppyBird extends React.Component {
 			const jump = -11.5;
 			const cTenth = canvas.width / 10;
 
+			// Pipe settings
 			const pipeWidth = 78;
 			const pipeGap = 270;
 			const pipeLoc = () => Math.random() * (canvas.height - (pipeGap + pipeWidth) - pipeWidth) + pipeWidth;
@@ -29,6 +30,7 @@ class FloppyBird extends React.Component {
 				flight,
 				flyHeight;
 
+			// Actualising the game
 			const setup = () => {
 				currentScore = 0;
 				flight = jump;
@@ -41,10 +43,13 @@ class FloppyBird extends React.Component {
 
 			const render = () => {
 				index++;
+
+				// Background renderer
 				ctx.drawImage(img, 0, 0, canvas.width, canvas.height, -((index * (speed / 2)) % canvas.width) + canvas.width, 0, canvas.width, canvas.height);
 				ctx.drawImage(img, 0, 0, canvas.width, canvas.height, -((index * (speed / 2)) % canvas.width), 0, canvas.width, canvas.height);
 
 				if (gamePlaying) {
+					// Bird physics
 					ctx.drawImage(img, 432, Math.floor((index % 9) / 3) * size[1], ...size, cTenth, flyHeight, ...size);
 					flight += gravity;
 					flyHeight = Math.min(flyHeight + flight, canvas.height - size[1]);
@@ -54,6 +59,7 @@ class FloppyBird extends React.Component {
 				}
 
 				if (gamePlaying) {
+					// Pipe display
 					pipes.map((pipe) => {
 						pipe[0] -= speed;
 
@@ -62,8 +68,10 @@ class FloppyBird extends React.Component {
 						if (pipe[0] <= -pipeWidth) {
 							currentScore++;
 							bestScore = Math.max(bestScore, currentScore);
+							// Remove pipe and create new on
 							pipes = [...pipes.slice(1), [pipes[pipes.length - 1][0] + pipeGap + pipeWidth, pipeLoc()]];
 						}
+						// End if hit the pipe
 						if ([pipe[0] <= cTenth + size[0], pipe[0] + pipeWidth >= cTenth, pipe[1] > flyHeight || pipe[1] + pipeGap < flyHeight + size[1]].every((elem) => elem)) {
 							gamePlaying = false;
 							setup();
@@ -73,6 +81,7 @@ class FloppyBird extends React.Component {
 					});
 				}
 
+				// Score refresh
 				ctx.fillText(`Best score : ${bestScore}`, 5, 20);
 				ctx.fillText(`${currentScore}`, 330, 20);
 				ctx.font = '12px "Press Start 2P"';
@@ -83,6 +92,7 @@ class FloppyBird extends React.Component {
 			setup();
 			img.onload = render;
 
+			// Start
 			canvas.addEventListener("click", () => {
 				gamePlaying = true;
 			});

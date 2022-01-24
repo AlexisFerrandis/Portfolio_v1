@@ -16,6 +16,7 @@ class ParticlesTheme extends React.Component {
 			let particlesArray;
 			canvas.style.background = "#0d47a1";
 
+			// Personnalisation
 			// let mouseRadius = 120;
 			// let particleColor = "#64b5f6";
 			// let particleSize = 3;
@@ -34,6 +35,7 @@ class ParticlesTheme extends React.Component {
 				mouse.y = event.y;
 			});
 
+			// Create particles
 			class Particle {
 				constructor(x, y, directionX, directionY, size, color) {
 					this.x = x;
@@ -43,12 +45,14 @@ class ParticlesTheme extends React.Component {
 					this.size = size;
 					this.color = color;
 				}
+				// Draw individual particle
 				draw() {
 					ctx.beginPath();
 					ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
 					ctx.fillStyle = "#64b5f6";
 					ctx.fill();
 				}
+				// Check positions, draw and move the particles
 				update() {
 					if (this.x > canvas.width || this.x < 0) {
 						this.directionX = -this.directionX;
@@ -57,6 +61,7 @@ class ParticlesTheme extends React.Component {
 						this.directionY = -this.directionY;
 					}
 
+					// Check collision detection
 					let dx = mouse.x - this.x;
 					let dy = mouse.y - this.y;
 					let distance = Math.sqrt(dx * dx + dy * dy);
@@ -74,12 +79,14 @@ class ParticlesTheme extends React.Component {
 							this.y -= 10;
 						}
 					}
+					// Move particle
 					this.x += this.directionX;
 					this.y += this.directionY;
 					this.draw();
 				}
 			}
 
+			// Create particle array
 			function init() {
 				particlesArray = [];
 				let numberOfParticles = (canvas.height * canvas.width) / 100000;
@@ -95,6 +102,7 @@ class ParticlesTheme extends React.Component {
 				}
 			}
 
+			// Check if particles are close enough to draw a line between them
 			function connect() {
 				let opacityValue = 1;
 				for (let a = 0; a < particlesArray.length; a++) {
@@ -114,6 +122,7 @@ class ParticlesTheme extends React.Component {
 				}
 			}
 
+			// Animation loop
 			function animate() {
 				requestAnimationFrame(animate);
 				ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -124,6 +133,7 @@ class ParticlesTheme extends React.Component {
 				connect();
 			}
 
+			// Resize event
 			window.addEventListener("resize", function () {
 				canvas.width = innerWidth;
 				canvas.height = innerHeight;
@@ -131,6 +141,7 @@ class ParticlesTheme extends React.Component {
 				init();
 			});
 
+			//mouse out event
 			window.addEventListener("mouseout", function () {
 				mouse.x = undefined;
 				mouse.y = undefined;

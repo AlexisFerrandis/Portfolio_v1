@@ -3,12 +3,14 @@ import Draggable from "react-draggable";
 
 import Header from "../windows/Header";
 
+// Windows
 import Profil from "../windows/Profil";
 import Portfolio from "../windows/Portfolio";
 import Contact from "../windows/Contact";
 import Themes from "../windows/Themes";
 import Arcade from "../windows/Arcade";
 
+// Themes
 import DefaultTheme from "../themes/DefaultTheme";
 import TartanTheme from "../themes/TartanTheme";
 import MatrixTheme from "../themes/MatrixTheme";
@@ -16,13 +18,15 @@ import ParticlesTheme from "../themes/ParticlesTheme";
 import GradiantTheme from "../themes/GradiantTheme";
 import BubblesTheme from "../themes/BubblesTheme";
 
+// Arcade
 import FloppyBird from "../arcade/FloppyBird";
 import TwoOFourHeight from "../arcade/TwoOFourHeight";
 
-// import Netfloux from "../projects/perso/netfloux/Netfloux";
+// Projects
 import Chatbot from "../projects/perso/chatbot/Chatbot";
 
 const Navbar = () => {
+	// Windows
 	const [profilWindow, setProfilWindow] = useState(false);
 	const [profilContent, setProfilContent] = useState(true);
 
@@ -40,20 +44,18 @@ const Navbar = () => {
 
 	const [themeSelection, setThemeSelection] = useState("default");
 
-	// projects
-	// const [netflouxWindow, setNetflouxWindow] = useState(false);
-	// const [netflouxContent, setNetflouxContent] = useState(true);
-
+	// Projects
 	const [chatbotWindow, setChatbotWindow] = useState(false);
 	const [chatbotContent, setChatbotContent] = useState(true);
 
-	// arcade
+	// Arcade
 	const [floppyBirdWindow, setFloppyBirdWindow] = useState(false);
 	const [floppyBirdContent, setFloppyBirdContent] = useState(true);
 
 	const [twoOFourHeightWindow, setTwoOFourHeightWindow] = useState(false);
 	const [twoOFourHeightContent, setTwoOFourHeightContent] = useState(true);
 
+	// ZIndex handler
 	const handleZIndex = (e) => {
 		const windows = document.querySelectorAll(".window");
 		for (let i = 0; i < windows.length; i++) {
@@ -64,6 +66,7 @@ const Navbar = () => {
 
 	return (
 		<>
+			{/* Themes renderer */}
 			<div className="theme-display">
 				{themeSelection === "default" && <DefaultTheme />}
 				{themeSelection === "tartan" && <TartanTheme />}
@@ -72,6 +75,7 @@ const Navbar = () => {
 				{themeSelection === "gradiant" && <GradiantTheme />}
 				{themeSelection === "bubbles" && <BubblesTheme />}
 			</div>
+			{/* Navbar display */}
 			<div className="navbar">
 				<button onClick={() => setProfilWindow(!profilWindow)}>
 					<img src="../assets/icons/profil.svg" alt="Profil" />
@@ -89,6 +93,7 @@ const Navbar = () => {
 					<img src="../assets/icons/arcade.svg" alt="Launch the game !" />
 				</button>
 			</div>
+			{/* Windows display */}
 			{profilWindow && (
 				<Draggable positionOffset={{ x: "10%", y: "10%" }}>
 					<section
@@ -159,7 +164,7 @@ const Navbar = () => {
 					</section>
 				</Draggable>
 			)}
-			{/* arcade */}
+			{/* Arcade display */}
 			<div className="arcade-display">
 				{floppyBirdWindow && (
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -190,7 +195,7 @@ const Navbar = () => {
 					</Draggable>
 				)}
 			</div>
-			{/* project */}
+			{/* Projects display */}
 			{/* {netflouxWindow && (
 				<div className="project-display">
 					<Draggable defaultPosition={{ x: 0, y: 0 }}>

@@ -2,12 +2,14 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+	// Input states
 	const [name, setName] = useState("");
 	const [compagny, setCompagny] = useState("");
 	const [mail, setMail] = useState("");
 	const [message, setMessage] = useState("");
 	const [messageSent, setMessageSent] = useState(false);
 
+	// Error states
 	const [nameError, setNameError] = useState(false);
 	const [compagnyError, setCompagnyError] = useState(false);
 	const [mailError, setMailError] = useState(false);
@@ -15,6 +17,7 @@ export const Contact = () => {
 
 	const form = useRef();
 
+	// Regex
 	function inputValidation() {
 		if (name.length < 24 && name.length > 3 && /^([A-Za-z]{3,20})?([-]{0,1})?([A-Za-z]{3,20})$/.test(name)) {
 			setNameError(false);
@@ -43,6 +46,7 @@ export const Contact = () => {
 		}
 	}
 
+	// Handle submit
 	const sendEmail = (e) => {
 		e.preventDefault();
 
