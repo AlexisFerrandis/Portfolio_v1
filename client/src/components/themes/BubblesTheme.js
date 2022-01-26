@@ -43,7 +43,7 @@ const BubblesTheme = () => {
 			<span></span>
 			<span></span>
 			<span></span>
-			<img src="../assets/logo/af-black-logo.svg" alt="logo" className="logo" />
+			<img src="../assets/logo/af-logo.svg" alt="logo" className="logo" />
 		</div>
 	);
 };

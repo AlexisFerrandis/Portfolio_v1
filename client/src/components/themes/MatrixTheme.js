@@ -97,7 +97,7 @@ class MatrixTheme extends React.Component {
 		return (
 			<div className="desktop-theme__matrix">
 				<canvas ref="matrixCanvas" id="matrixCanvas" />
-				<img ref="img" src="../assets/logo/af-black-logo.svg" alt="logo" className="logo" />
+				<img ref="img" src="../assets/logo/af-logo.svg" alt="logo" className="logo" />
 			</div>
 		);
 	}

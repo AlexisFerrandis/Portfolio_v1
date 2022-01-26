@@ -2,10 +2,11 @@
 	animation: fade-translateY $short-animation forwards;
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	width: 100%;
+	left: 10px;
+	width: 80%;
 	background-color: $color-primary;
 	color: $color-secondary;
+	opacity: 0.9;
 	border-radius: 7px;
 	.icons {
 		display: flex;
@@ -30,10 +31,12 @@
 }
 .infos {
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	top: 0;
-	left: 0;
 	height: 100%;
-	min-width: 100px;
+	width: 98px;
 	padding: 7px;
 	background-color: $color-primary;
 	font-size: 1em;

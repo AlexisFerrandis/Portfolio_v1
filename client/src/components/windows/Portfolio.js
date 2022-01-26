@@ -3,12 +3,15 @@ import React, { useState } from "react";
 import InfoBubble from "./InfoBubble";
 
 const Portfolio = (props) => {
+	// Portfolio sections
 	const [proDisplay, setProDisplay] = useState(true);
 	const [persoDisplay, setPersoDisplay] = useState(false);
 
+	// App
 	const [bacchusInfoBubble, setBacchusInfoBubble] = useState(false);
 	const [networkInfoBubble, setNetworkInfoBubble] = useState(false);
 	const [konsolInfoBubble, setKonSolInfoBubble] = useState(false);
+	const [portfolioInfoBubble, setPortfolioInfoBubble] = useState(false);
 
 	return (
 		<div className="content">
@@ -42,13 +45,15 @@ const Portfolio = (props) => {
 				<div className="content">
 					<div className="portfolio-illustration">
 						<img className="illustration-preview" src="../assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" onClick={() => setBacchusInfoBubble(!bacchusInfoBubble)} />
-						<p>Le Repaire de Bacchus</p>
+						<p>
+							Le Repaire
+							<br />
+							de Bacchus
+						</p>
 						{bacchusInfoBubble && (
 							<InfoBubble
 								infos={
 									<h5>
-										Développement
-										<br />
 										Intégration
 										<br />
 										SEO
@@ -76,7 +81,7 @@ const Portfolio = (props) => {
 						</NavLink>
 					</BrowserRouter> */}
 					<div className="portfolio-illustration" onClick={() => props.chatbot(true)}>
-						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.jpg" alt="chatbot" />
+						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
 						<p>Chatbot</p>
 					</div>
 					<div className="portfolio-illustration">
@@ -121,8 +126,9 @@ const Portfolio = (props) => {
 						)}
 					</div>
 					<div className="portfolio-illustration">
-						<img className="illustration-preview" src="../assets/logo/af-logo.svg" alt="site personnel" />
-						<p>Af.com</p>
+						<img className="illustration-preview" src="../assets/logo/af-white-logo.svg" alt="site personnel" onClick={() => setPortfolioInfoBubble(!portfolioInfoBubble)} />
+						<p>Portfolio</p>
+						{portfolioInfoBubble && <InfoBubble github={"https://github.com/AlexisFerrandis/AlexisFerrandis"} />}
 					</div>
 				</div>
 			)}

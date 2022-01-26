@@ -156,7 +156,7 @@ class ParticlesTheme extends React.Component {
 		return (
 			<div className="desktop-theme__particles">
 				<canvas ref="particlesCanvas" id="particlesCanvas" />
-				<img ref="img" src="../assets/logo/af-black-logo.svg" alt="logo" className="logo" />
+				<img ref="img" src="../assets/logo/af-logo.svg" alt="logo" className="logo" />
 			</div>
 		);
 	}

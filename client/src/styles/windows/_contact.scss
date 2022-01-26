@@ -32,14 +32,12 @@
 		form {
 			text-align: center;
 			padding: 1em 0 0.5em;
-			// background-color: rgba(13, 72, 161, 0.5);
-			color: $color-secondary;
+			color: $white;
 			border-radius: 7px;
 			.form {
 				display: flex;
-				justify-content: space-around;
+				justify-content: space-evenly;
 				text-align: left;
-				font-size: 1em;
 				label {
 					position: relative;
 					.error {
@@ -93,21 +91,8 @@
 				opacity: 0.8;
 			}
 			.submit {
-				background: none;
-				color: $color-secondary;
-				font-size: 1em;
-				text-transform: uppercase;
-				min-width: 140px;
-				padding: 10px 15px;
-				margin: 1em 0 1em;
-				border-radius: 25px;
-				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
-				-webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
-				outline: 1px solid;
-				outline-color: rgba(255, 255, 255, 0.5);
-				outline-offset: 0px;
-				transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-				cursor: pointer;
+				@extend .btn-effect;
+				margin-top: 1em;
 				&:hover {
 					box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
 					outline-color: rgba(255, 255, 255, 0);

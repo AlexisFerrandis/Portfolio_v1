@@ -95,7 +95,7 @@ const Navbar = () => {
 			</div>
 			{/* Windows display */}
 			{profilWindow && (
-				<Draggable positionOffset={{ x: "10%", y: "10%" }}>
+				<Draggable positionOffset={{ x: "10%", y: "10%" }} cancel={"button, img, a"}>
 					<section
 						className="window"
 						id="profilWindow"
@@ -109,7 +109,7 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{portfolioWindow && (
-				<Draggable defaultPosition={{ x: 2, y: 35 }}>
+				<Draggable defaultPosition={{ x: 2, y: 35 }} cancel={"button, img, a, .tab, .infos"}>
 					<section
 						className="window"
 						id="portfolioWindow"
@@ -117,7 +117,7 @@ const Navbar = () => {
 							handleZIndex(e);
 						}}
 					>
-						<Header title="Portfolio" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
+						<Header title="Projects" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
 						{portfolioContent && <Portfolio chatbot={setChatbotWindow} />}
 					</section>
 				</Draggable>
@@ -214,7 +214,7 @@ const Navbar = () => {
 			)} */}
 			{chatbotWindow && (
 				<div className="project-display">
-					<Draggable defaultPosition={{ x: 0, y: 0 }} cancel={"input"}>
+					<Draggable defaultPosition={{ x: 0, y: 0 }} cancel={"input, p, button"}>
 						<section
 							className="window"
 							id="chatbot"
