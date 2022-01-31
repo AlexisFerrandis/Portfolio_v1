@@ -1,0 +1,161 @@
+#konsol {
+	width: 95%;
+	max-width: 420px;
+	font-family: "Noto Sans KR", sans-serif;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: rgb(117, 219, 205);
+		border-radius: 0px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: rgba(117, 219, 205, 0.7);
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 0px;
+		box-shadow: inset 0px 0px 0px 0px black;
+	}
+	.konsol-content {
+		position: relative;
+		height: 90vh;
+		padding: 1em;
+		overflow-y: scroll;
+		background-color: black;
+		color: $konsol-primary;
+		overflow-x: hidden;
+		.name {
+			font-size: 1.2em;
+			color: $konsol-secondary;
+		}
+		.logo {
+			img {
+				width: 70%;
+				object-fit: cover;
+				margin-bottom: 1.5em;
+			}
+			h1 {
+				font-size: 1.5em;
+				margin-bottom: 1.5em;
+				span {
+					color: $konsol-secondary;
+					font-weight: 600;
+				}
+			}
+		}
+		#canvasLogo {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		#citation {
+			margin: 1em 0 2em;
+			height: 85px;
+		}
+		h2 {
+			position: relative;
+			text-align: center;
+			font-size: 1.7em;
+			margin: 2em 0 1em;
+			&::before {
+				content: "";
+				position: absolute;
+				height: 1px;
+				width: 70%;
+				background-color: white;
+				top: -5px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		.song-section {
+			position: relative;
+			#canvasSong {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.song-article {
+				display: flex;
+				justify-content: space-between;
+				border: 2px solid white;
+				height: 170px;
+				padding: 7px;
+				margin-bottom: 1em;
+				img {
+					width: 40%;
+					object-fit: cover;
+					z-index: 1;
+				}
+				.cover {
+					border: 2px solid $konsol-secondary;
+				}
+				.player {
+					display: flex;
+					justify-content: center;
+					text-align: center;
+					width: 60%;
+					margin-top: 0.8em;
+					h3 {
+						font-size: 1em;
+					}
+					p {
+						color: $konsol-secondary;
+						font-style: italic;
+						font-size: 0.8em;
+					}
+					img {
+						width: 30px;
+						margin-top: 0.7em;
+						filter: invert(100%);
+						cursor: pointer;
+					}
+					.pause {
+						width: 20px;
+					}
+				}
+			}
+		}
+		.event-article {
+			margin-bottom: 3em;
+			h3 {
+				text-align: center;
+				color: $konsol-secondary;
+			}
+			img {
+				width: 100%;
+				height: 255px;
+				object-fit: cover;
+				margin: 1em 0;
+				border: 1px solid white;
+			}
+			span {
+				color: $konsol-secondary;
+			}
+		}
+	}
+	footer {
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+			margin: 1em 0;
+			img {
+				filter: invert(100%) brightness(80%);
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+				transition: $short-animation;
+				&:hover {
+					transform: scale(1.02);
+					filter: invert(100%) brightness(100%);
+				}
+			}
+		}
+	}
+}

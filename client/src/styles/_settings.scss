@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 // settings
 *,
@@ -41,6 +42,10 @@ $green-button: #47d043;
 
 $white: white;
 
+$konsol-primary: white;
+$konsol-secondary: rgb(117, 219, 205);
+$konsol-tertiary: rgb(250, 163, 129);
+
 // mixins
 @mixin mobile-breakpoint {
 	@media (max-width: 550px) {
@@ -52,6 +57,7 @@ $white: white;
 $short-animation: 200ms;
 $mid-animation: 500ms;
 $theme-animation: 1234ms;
+$konsol-animation: 2000ms;
 
 @keyframes fade {
 	from {

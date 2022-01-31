@@ -24,6 +24,7 @@ import TwoOFourHeight from "../arcade/TwoOFourHeight";
 
 // Projects
 import Chatbot from "../projects/perso/chatbot/Chatbot";
+import Konsol from "../projects/perso/konsol/Konsol";
 
 const Navbar = () => {
 	// Windows
@@ -47,6 +48,9 @@ const Navbar = () => {
 	// Projects
 	const [chatbotWindow, setChatbotWindow] = useState(false);
 	const [chatbotContent, setChatbotContent] = useState(true);
+
+	const [konsolWindow, setKonsolWindow] = useState(false);
+	const [konsolContent, setKonsolContent] = useState(true);
 
 	// Arcade
 	const [floppyBirdWindow, setFloppyBirdWindow] = useState(false);
@@ -118,7 +122,7 @@ const Navbar = () => {
 						}}
 					>
 						<Header title="Projects" redBtnRef={setPortfolioWindow} yellowBtnRef={setPortfolioContent} greenBtnRef={setPortfolioContent} />
-						{portfolioContent && <Portfolio chatbot={setChatbotWindow} />}
+						{portfolioContent && <Portfolio chatbot={setChatbotWindow} konsol={setKonsolWindow} />}
 					</section>
 				</Draggable>
 			)}
@@ -208,6 +212,22 @@ const Navbar = () => {
 						>
 							<Header title="T.bot" redBtnRef={setChatbotWindow} yellowBtnRef={setChatbotContent} greenBtnRef={setChatbotContent} />
 							{chatbotContent && <Chatbot />}
+						</section>
+					</Draggable>
+				</div>
+			)}
+			{konsolWindow && (
+				<div className="project-display">
+					<Draggable cancel={"button, .konsol-content"}>
+						<section
+							className="window"
+							id="konsol"
+							onClick={(e) => {
+								handleZIndex(e);
+							}}
+						>
+							<Header title="KonSol" redBtnRef={setKonsolWindow} yellowBtnRef={setKonsolContent} greenBtnRef={setKonsolContent} />
+							{konsolContent && <Konsol />}
 						</section>
 					</Draggable>
 				</div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { BrowserRouter, NavLink } from "react-router-dom";
 import InfoBubble from "./InfoBubble";
 
 const Portfolio = (props) => {
@@ -9,8 +8,8 @@ const Portfolio = (props) => {
 
 	// App
 	const [bacchusInfoBubble, setBacchusInfoBubble] = useState(false);
+
 	const [networkInfoBubble, setNetworkInfoBubble] = useState(false);
-	const [konsolInfoBubble, setKonSolInfoBubble] = useState(false);
 	const [portfolioInfoBubble, setPortfolioInfoBubble] = useState(false);
 
 	return (
@@ -72,14 +71,6 @@ const Portfolio = (props) => {
 			)}
 			{persoDisplay && (
 				<div className="content">
-					{/* <BrowserRouter>
-						<NavLink to="/netfloux">
-							<div className="portfolio-illustration" onClick={() => props.netfloux(true)}>
-								<img className="illustration-preview" src="../assets/img/projects/netfloux/logo-n.jpg" alt="netfloux" />
-								<p>Netfloux</p>
-							</div>
-						</NavLink>
-					</BrowserRouter> */}
 					<div className="portfolio-illustration" onClick={() => props.chatbot(true)}>
 						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
 						<p>Chatbot</p>
@@ -107,23 +98,9 @@ const Portfolio = (props) => {
 							/>
 						)}
 					</div>
-					<div className="portfolio-illustration">
-						<img className="illustration-preview" src="../assets/img/projects/konsol/logo.png" alt="konsol" onClick={() => setKonSolInfoBubble(!konsolInfoBubble)} />
+					<div className="portfolio-illustration" onClick={() => props.konsol(true)}>
+						<img className="illustration-preview" src="../assets/img/projects/konsol/logo.png" alt="konsol" />
 						<p>KonSol</p>
-						{/* {konsolInfoBubble && (
-							<InfoBubble
-								infos={
-									<h5>
-										Design
-										<br />
-										Canvas
-										<br />
-										Audio
-									</h5>
-								}
-								github={"https://github.com/AlexisFerrandis/kon-sol"}
-							/>
-						)} */}
 					</div>
 					<div className="portfolio-illustration">
 						<img className="illustration-preview" src="../assets/logo/af-white-logo.svg" alt="site personnel" onClick={() => setPortfolioInfoBubble(!portfolioInfoBubble)} />
