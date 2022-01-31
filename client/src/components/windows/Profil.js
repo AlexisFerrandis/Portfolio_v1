@@ -37,7 +37,7 @@ const Profil = (props) => {
 					<img src="../assets/icons/react.svg" alt="react" />
 				</div>
 			</div>
-			<button className="btn btn-5" type="button" onClick={() => props.contactBtn(true)}>
+			<button className="btn" type="button" onClick={() => props.contactBtn(true)}>
 				Contact
 			</button>
 		</div>

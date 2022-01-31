@@ -1,7 +1,11 @@
 #arcadeWindow {
 	max-width: 430px;
 	z-index: 5;
-	top: 10px;
+	top: 5%;
+	left: 73%;
+	@include tablet-breakpoint {
+		left: 43%;
+	}
 	@include mobile-breakpoint {
 		top: 128px;
 		width: unset;

@@ -27,10 +27,10 @@ const Themes = (props) => {
 				<img className="illustration-preview" src="../assets/img/themes/bubbles.png" alt="Bubbles theme" />
 				<p>Bubbles</p>
 			</div>
-			{/* <div className="theme-illustration">
-				<img className="illustration-preview" src="./assets/img/themes/soundwave.gif" alt="Soundwave theme" />
-				<p>SoundWave</p>
-			</div> */}
+			<div className="theme-illustration" onClick={() => props.themeSelected("cubes")}>
+				<img className="illustration-preview" src="../assets/img/themes/cubes.png" alt="Cubes theme" />
+				<p>Cubes</p>
+			</div>
 		</div>
 	);
 };

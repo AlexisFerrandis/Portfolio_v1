@@ -1,6 +1,11 @@
 #themesWindow {
 	width: 430px;
+	top: 52%;
+	left: 64%;
 	z-index: 4;
+	@include tablet-breakpoint {
+		left: 22%;
+	}
 	@include mobile-breakpoint {
 		width: 80%;
 		top: 96px;

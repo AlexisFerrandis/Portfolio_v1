@@ -384,7 +384,7 @@ class Konsol extends React.Component {
 
 						<article className="event-article">
 							<h3>리오 카니발</h3>
-							<img src="../assets/img/projects/konsol/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg" alt="Rio festival" />
+							<img src="../assets/img/projects/konsol/danny-howe-74kShnX5zZI-unsplash.jpg" alt="Rio festival" />
 							<p>
 								두르 <span>페스티벌은</span> 카를로 디 안토니오 가 조직한 대안적, 독립 및 다문화 음악의 유럽 <span>축제로</span>, 매년 여름 벨기에 몽스 근처의 두르(Dour)에서 프랑스 국경 근처의 두르 <span>풍력</span> 발전소에서 5일 동안 열립니다. 에노 ...
 							</p>

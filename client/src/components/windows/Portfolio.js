@@ -63,7 +63,7 @@ const Portfolio = (props) => {
 									</h5>
 								}
 								github={"https://github.com/AlexisFerrandis/Bacchus-web-3.0"}
-								link={"https://www.lerepairedebacchus.com/"}
+								// link={"https://www.lerepairedebacchus.com/"}
 							/>
 						)}
 					</div>

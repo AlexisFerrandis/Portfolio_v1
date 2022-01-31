@@ -1,7 +1,11 @@
 #contactWindow {
 	width: 560px;
-	top: 10px;
+	top: 7%;
+	left: 40%;
 	z-index: 2;
+	@include tablet-breakpoint {
+		left: 3%;
+	}
 	@include mobile-breakpoint {
 		left: 2px;
 		width: 99%;

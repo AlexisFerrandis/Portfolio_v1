@@ -1,6 +1,7 @@
 #profilWindow {
 	width: 350px;
 	top: 10px;
+	left: 10px;
 	@include mobile-breakpoint {
 		left: 2px;
 		width: 99%;

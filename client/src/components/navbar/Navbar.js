@@ -17,6 +17,7 @@ import MatrixTheme from "../themes/MatrixTheme";
 import ParticlesTheme from "../themes/ParticlesTheme";
 import GradiantTheme from "../themes/GradiantTheme";
 import BubblesTheme from "../themes/BubblesTheme";
+import CubesTheme from "../themes/CubesTheme";
 
 // Arcade
 import FloppyBird from "../arcade/FloppyBird";
@@ -78,6 +79,7 @@ const Navbar = () => {
 				{themeSelection === "particles" && <ParticlesTheme />}
 				{themeSelection === "gradiant" && <GradiantTheme />}
 				{themeSelection === "bubbles" && <BubblesTheme />}
+				{themeSelection === "cubes" && <CubesTheme />}
 			</div>
 			{/* Navbar display */}
 			<div className="navbar">

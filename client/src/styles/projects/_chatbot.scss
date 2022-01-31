@@ -1,7 +1,10 @@
 #chatbot {
 	width: 360px;
+	top: 8%;
+	left: 22%;
 	@include mobile-breakpoint {
 		width: 90%;
+		left: 5%;
 	}
 	.chatbot-content {
 		::-webkit-scrollbar {
