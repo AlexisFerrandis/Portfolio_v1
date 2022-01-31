@@ -6,8 +6,8 @@ class MatrixTheme extends React.Component {
 		const ctx = canvas.getContext("2d");
 		const img = this.refs.img;
 
-		canvas.width = window.innerWidth + 1000;
-		canvas.height = window.innerHeight + 200;
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
 
 		let gradient = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
 		gradient.addColorStop(0, "#1e88e5");

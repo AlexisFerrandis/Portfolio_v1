@@ -1,5 +1,12 @@
 #contactWindow {
 	width: 560px;
+	top: 10px;
+	z-index: 2;
+	@include mobile-breakpoint {
+		left: 2px;
+		width: 99%;
+		top: 32px;
+	}
 	.content {
 		img {
 			filter: invert(100%);
@@ -17,6 +24,10 @@
 				border-radius: 7px;
 				font-size: 0.9em;
 				transition: $short-animation;
+				&:hover {
+					-webkit-box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.1);
+					box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.1);
+				}
 				&:focus {
 					transform: scale(0.99);
 					-webkit-box-shadow: inset 0px 5px 20px 5px rgba(0, 0, 0, 0.3);
@@ -38,6 +49,10 @@
 				display: flex;
 				justify-content: space-evenly;
 				text-align: left;
+				@include mobile-breakpoint {
+					flex-direction: column;
+					margin-left: 2em;
+				}
 				label {
 					position: relative;
 					.error {
@@ -58,6 +73,9 @@
 					font-family: "Ubuntu", sans-serif;
 					font-size: 0.9em;
 					color: $color-primary;
+					@include mobile-breakpoint {
+						width: 60%;
+					}
 					&:focus-visible {
 						outline: 1px solid $color-secondary;
 					}
@@ -77,6 +95,9 @@
 					}
 					&::placeholder {
 						font-style: italic;
+					}
+					@include mobile-breakpoint {
+						height: 98px;
 					}
 				}
 			}

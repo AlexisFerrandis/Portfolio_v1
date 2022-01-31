@@ -36,4 +36,39 @@
 		color: #ffffff;
 		transition: all 0.3s;
 	}
+	.controls {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 2vmin;
+		.left-down-right {
+			display: flex;
+		}
+		.key {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 10vmin;
+			height: 10vmin;
+			max-width: 60px;
+			max-height: 60px;
+			margin: 2vmin 2vmin 0;
+			backdrop-filter: blur(22px);
+			-webkit-backdrop-filter: blur(22px);
+			cursor: pointer;
+			transition: $short-animation;
+			border-radius: 7px;
+			&:hover {
+				background-color: #0d48a185;
+			}
+			&:active {
+				transform: scale(0.96);
+			}
+			img {
+				width: 80%;
+				height: 80%;
+				filter: invert(100%);
+			}
+		}
+	}
 }

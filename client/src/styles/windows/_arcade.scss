@@ -1,9 +1,16 @@
 #arcadeWindow {
-	width: 430px;
+	max-width: 430px;
+	z-index: 5;
+	top: 10px;
+	@include mobile-breakpoint {
+		top: 128px;
+		width: unset;
+		left: 15%;
+	}
 	.content {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 15px;
+		justify-content: space-around;
 		.arcade-illustration {
 			@extend .illustration-container;
 		}

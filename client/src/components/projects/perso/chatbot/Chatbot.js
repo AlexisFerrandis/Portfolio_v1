@@ -17,6 +17,8 @@ const Chatbot = () => {
 		/* 7 */ ["au revoir", "bye", "a la prochaine", "revoir", "ciao", "bonne journée", "bonne soirée"],
 
 		// medium
+		/* 8 */ ["alexis", "alexis ferrandis", "ferrandis", "qui est alexis", "qui est alexis ferrandis", "alexi", "ferrandi", "ferrandis alexis"],
+		/* 9 */ ["a quoi tu sers", "a quoi sers tu", "tu sais faire quoi", "que sais tu faire", "quel est ton but", "pourquoi tu existes", "tu sers a quoi", "que fais tu", "tu fais quoi"],
 	];
 
 	const answers = [
@@ -27,10 +29,12 @@ const Chatbot = () => {
 		/* 3 */ ["Ca me fait plaisir alors !", "Tant mieux.", "Tout cela est parfait."],
 		/* 4 */ ["Bien alors... Comment ca se fait?", "Il ne faut pas, la vie est pleine de surprise!", "Cela me chagrine.", "J'espère que vous vous porterez mieux."],
 		/* 5 */ ["A propos de quoi?", "Il était une fois...", "Quelle est la différence entre un robot et du ketchup ? <br/>Il n’y en a pas : Ils sont tous les deux automates."],
-		/* 6 */ ["Content d'avoir pu aider", "Pas de problème.", "Ca me fait plaisir."],
-		/* 7 */ ["A la prochaine", "Au revoir"],
+		/* 6 */ ["Content d'avoir pu aider.", "Pas de problème.", "Ca me fait plaisir."],
+		/* 7 */ ["A la prochaine.", "Au revoir.", "C'était un plaisir."],
 
 		// medium
+		/* 8 */ ["Alexis est mon créateur.", "Alexis est un développeur web.", "Vous êtes bien sur le portfolio de Alexis Ferrandis."],
+		/* 9 */ ["Je suis un robot communicatif.", "Je suis principalement là pour vous aider.", "Je suis là pour répondre à vos question."],
 	];
 
 	const handleSubmit = () => {

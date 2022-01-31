@@ -110,7 +110,7 @@ const Portfolio = (props) => {
 					<div className="portfolio-illustration">
 						<img className="illustration-preview" src="../assets/img/projects/konsol/logo.png" alt="konsol" onClick={() => setKonSolInfoBubble(!konsolInfoBubble)} />
 						<p>KonSol</p>
-						{konsolInfoBubble && (
+						{/* {konsolInfoBubble && (
 							<InfoBubble
 								infos={
 									<h5>
@@ -123,7 +123,7 @@ const Portfolio = (props) => {
 								}
 								github={"https://github.com/AlexisFerrandis/kon-sol"}
 							/>
-						)}
+						)} */}
 					</div>
 					<div className="portfolio-illustration">
 						<img className="illustration-preview" src="../assets/logo/af-white-logo.svg" alt="site personnel" onClick={() => setPortfolioInfoBubble(!portfolioInfoBubble)} />

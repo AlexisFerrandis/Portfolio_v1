@@ -1,5 +1,12 @@
 #portfolioWindow {
 	width: 430px;
+	z-index: 3;
+	top: 10px;
+	@include mobile-breakpoint {
+		width: 70%;
+		top: 64px;
+		left: 15%;
+	}
 	.content {
 		.portfolio-header {
 			display: flex;
@@ -18,6 +25,7 @@
 		.content {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-around;
 			padding: 15px;
 			a {
 				color: $color-secondary;

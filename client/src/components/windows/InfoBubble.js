@@ -7,7 +7,7 @@ const InfoBubble = (props) => {
 		<>
 			<div className="info-bubble">
 				<div className="icons">
-					{props.infos && (
+					{/* {props.infos && (
 						<img
 							src="../assets/icons/info-circle.svg"
 							alt="infos"
@@ -15,7 +15,7 @@ const InfoBubble = (props) => {
 								setInfos(true);
 							}}
 						/>
-					)}
+					)} */}
 					{props.github && (
 						<a href={props.github}>
 							<img src="../assets/icons/github-circle.svg" alt="github" />
@@ -32,7 +32,7 @@ const InfoBubble = (props) => {
 				<div
 					className="infos"
 					onClick={() => {
-						setInfos(false);
+						setInfos(!infos);
 					}}
 				>
 					{props.infos}

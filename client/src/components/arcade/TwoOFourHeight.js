@@ -222,11 +222,35 @@ class TwoOFourHeight extends React.Component {
 
 			return false;
 		});
+
+		// arrows
+		const keys = document.querySelectorAll(".key");
+		for (let i = 0; i < keys.length; i++) {
+			keys[i].addEventListener("click", () => {
+				let direction = null;
+
+				if (keys[i].id === "up") {
+					direction = "UP";
+				} else if (keys[i].id === "right") {
+					direction = "RIGHT";
+				} else if (keys[i].id === "down") {
+					direction = "DOWN";
+				} else if (keys[i].id === "left") {
+					direction = "LEFT";
+				}
+
+				if (direction !== null) {
+					grid.slide(direction);
+				}
+
+				return false;
+			});
+		}
 	}
 
 	render() {
 		return (
-			<div className="arcade--2048">
+			<div className="arcade-2048">
 				<div className="wrapper">
 					<div className="grid">
 						<div className="cell"></div>
@@ -245,6 +269,24 @@ class TwoOFourHeight extends React.Component {
 						<div className="cell"></div>
 						<div className="cell"></div>
 						<div className="cell"></div>
+					</div>
+				</div>
+				<div className="controls">
+					<div className="up">
+						<div className="key" id="up">
+							<img ref="img" src="../assets/icons/chevron-up.svg" alt="up" />
+						</div>
+					</div>
+					<div className="left-down-right">
+						<div className="key" id="left">
+							<img ref="img" src="../assets/icons/chevron-left.svg" alt="left" />
+						</div>
+						<div className="key" id="down">
+							<img ref="img" src="../assets/icons/chevron-down.svg" alt="down" />
+						</div>
+						<div className="key" id="right">
+							<img ref="img" src="../assets/icons/chevron-right.svg" alt="right" />
+						</div>
 					</div>
 				</div>
 			</div>

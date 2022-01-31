@@ -115,11 +115,11 @@ export const Contact = () => {
 			</form>
 
 			<div className="social">
-				<a href="https://github.com/AlexisFerrandis">
-					<img src="../assets/icons/github.svg" alt="github" />
-				</a>
 				<a href="https://www.linkedin.com/in/alexis-ferrandis-5b5343106/">
 					<img src="../assets/icons/linkedin.svg" alt="linkdin" />
+				</a>
+				<a href="https://github.com/AlexisFerrandis">
+					<img src="../assets/icons/github.svg" alt="github" />
 				</a>
 				<a href="https://twitter.com/AlexisFerrandis">
 					<img src="../assets/icons/twitter.svg" alt="twitter" />

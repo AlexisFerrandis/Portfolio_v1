@@ -95,7 +95,7 @@ const Navbar = () => {
 			</div>
 			{/* Windows display */}
 			{profilWindow && (
-				<Draggable positionOffset={{ x: "10%", y: "10%" }} cancel={"button, img, a"}>
+				<Draggable cancel={"button, img, a"}>
 					<section
 						className="window"
 						id="profilWindow"
@@ -109,7 +109,7 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{portfolioWindow && (
-				<Draggable defaultPosition={{ x: 2, y: 35 }} cancel={"button, img, a, .tab, .infos"}>
+				<Draggable cancel={"button, img, a, .tab, .infos"}>
 					<section
 						className="window"
 						id="portfolioWindow"
@@ -123,7 +123,7 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{contactWindow && (
-				<Draggable defaultPosition={{ x: 460, y: 35 }} cancel={"input, textArea"}>
+				<Draggable cancel={"button, input, textArea, a"}>
 					<section
 						className="window"
 						id="contactWindow"
@@ -137,7 +137,7 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{themesWindow && (
-				<Draggable defaultPosition={{ x: 462, y: 35 }}>
+				<Draggable cancel={"button, img"}>
 					<section
 						className="window"
 						id="themesWindow"
@@ -151,7 +151,7 @@ const Navbar = () => {
 				</Draggable>
 			)}
 			{arcadeWindow && (
-				<Draggable defaultPosition={{ x: 90, y: 105 }}>
+				<Draggable cancel={"button, img"}>
 					<section
 						className="window"
 						id="arcadeWindow"
@@ -167,7 +167,7 @@ const Navbar = () => {
 			{/* Arcade display */}
 			<div className="arcade-display">
 				{floppyBirdWindow && (
-					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+					<Draggable cancel={"button"}>
 						<section
 							className="window"
 							id="floppyBird"
@@ -181,7 +181,7 @@ const Navbar = () => {
 					</Draggable>
 				)}
 				{twoOFourHeightWindow && (
-					<Draggable defaultPosition={{ x: 0, y: 0 }}>
+					<Draggable cancel={"button, .key"}>
 						<section
 							className="window"
 							id="twoOFourHeight"
@@ -196,25 +196,9 @@ const Navbar = () => {
 				)}
 			</div>
 			{/* Projects display */}
-			{/* {netflouxWindow && (
-				<div className="project-display">
-					<Draggable defaultPosition={{ x: 0, y: 0 }}>
-						<section
-							className="window"
-							id="netfloux"
-							onClick={(e) => {
-								handleZIndex(e);
-							}}
-						>
-							<Header title="Netfloux" redBtnRef={setNetflouxWindow} yellowBtnRef={setNetflouxContent} greenBtnRef={setNetflouxContent} />
-							{netflouxContent && <Netfloux />}
-						</section>
-					</Draggable>
-				</div>
-			)} */}
 			{chatbotWindow && (
 				<div className="project-display">
-					<Draggable defaultPosition={{ x: 0, y: 0 }} cancel={"input, p, button"}>
+					<Draggable cancel={"input, p, button, #chatArea"}>
 						<section
 							className="window"
 							id="chatbot"

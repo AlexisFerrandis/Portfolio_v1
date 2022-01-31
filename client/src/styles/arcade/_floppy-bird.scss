@@ -1,5 +1,7 @@
 #floppyBird {
 	position: absolute;
+	@include mobile-breakpoint {
+	}
 	h5 {
 		font-family: "Press Start 2P", cursive;
 		padding: 1.2rem 0;
