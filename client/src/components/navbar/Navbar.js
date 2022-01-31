@@ -81,7 +81,7 @@ const Navbar = () => {
 				{themeSelection === "bubbles" && <BubblesTheme />}
 				{themeSelection === "cubes" && <CubesTheme />}
 			</div>
-			{/* Navbar display */}
+			{/* Navbar window opener */}
 			<div className="navbar">
 				<button onClick={() => setProfilWindow(!profilWindow)}>
 					<img src="../assets/icons/profil.svg" alt="Profil" />
@@ -101,7 +101,7 @@ const Navbar = () => {
 			</div>
 			{/* Windows display */}
 			{profilWindow && (
-				<Draggable cancel={"button, img, a"}>
+				<Draggable cancel={"button, img, a, .skills"}>
 					<section
 						className="window"
 						id="profilWindow"

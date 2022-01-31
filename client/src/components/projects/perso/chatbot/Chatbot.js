@@ -5,6 +5,7 @@ const Chatbot = () => {
 	const [suggestions, setSuggestions] = useState(true);
 	const [error, setError] = useState(false);
 
+	// Interactions
 	const questions = [
 		// basic
 		/* 0 */ ["hey", "coucou", "hello", "bonjour", "bien bonjour", "bonsoir", "bien bonsoir", "hi", "salut", "bonjou", "onjour", "ello", "chalu"],
@@ -23,7 +24,7 @@ const Chatbot = () => {
 
 	const answers = [
 		// basic
-		/* 0 */ ["Hello !", "Salut !", "Bienvenue !", "Bonjour !", "Bonsoir !", "Bienvenue, comment puis-je me rendre utile ?", "Bonjour, comment aller vous ?"],
+		/* 0 */ ["Hello !", "Salut !", "Bienvenue !", "Bonjour !", "Bonsoir !", "Bienvenue, comment puis-je me rendre utile ?", "Bonjour, comment allez vous ?"],
 		/* 1 */ ["Je vais bien, et vous?", "Ca va, je suis encore en train d'apprendre.", "Plutôt très bien.", "Mon émotion est positive.", "Mes circuits indiquent : OK."],
 		/* 2 */ ["En quelque sorte.", "C'est un bien grand mot.", "On peut dire ca oui.", "Un quoi ? Je suis un humain, j'aime faire des choses humaines comme boire de l'eau.", "Robots, humains, ne sommes-nous pas tous pareils au fond ?"],
 		/* 3 */ ["Ca me fait plaisir alors !", "Tant mieux.", "Tout cela est parfait."],
@@ -37,6 +38,7 @@ const Chatbot = () => {
 		/* 9 */ ["Je suis un robot communicatif.", "Je suis principalement là pour vous aider.", "Je suis là pour répondre à vos question."],
 	];
 
+	// Message verification
 	const handleSubmit = () => {
 		const chatArea = document.getElementById("chatArea");
 		userMessage.replace(/[^\w\s\d]/gi, "");
@@ -52,6 +54,7 @@ const Chatbot = () => {
 		}
 	};
 
+	// Simple suggestion handler
 	const handleSuggestion = (e) => {
 		setSuggestions(false);
 		const chatArea = document.getElementById("chatArea");
@@ -62,6 +65,7 @@ const Chatbot = () => {
 		chatArea.scrollTo(0, 10000);
 	};
 
+	// Chatbot logic
 	const handleMessage = (msg) => {
 		let botAnswer = "";
 		msg = msg.toLocaleLowerCase();
@@ -82,6 +86,7 @@ const Chatbot = () => {
 		}, Math.floor(Math.random() * (500 - 100)) + 100);
 	};
 
+	// Check in db
 	const interactions = (questions, answers, msg) => {
 		let i;
 		for (let x = 0; x < questions.length; x++) {

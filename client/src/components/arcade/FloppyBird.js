@@ -68,7 +68,7 @@ class FloppyBird extends React.Component {
 						if (pipe[0] <= -pipeWidth) {
 							currentScore++;
 							bestScore = Math.max(bestScore, currentScore);
-							// Remove pipe and create new on
+							// Remove pipe and create new one
 							pipes = [...pipes.slice(1), [pipes[pipes.length - 1][0] + pipeGap + pipeWidth, pipeLoc()]];
 						}
 						// End if hit the pipe

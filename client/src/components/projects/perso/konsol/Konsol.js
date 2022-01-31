@@ -12,7 +12,7 @@ class Konsol extends React.Component {
 		let adjustX = 1;
 		let adjustY = -1;
 
-		//handle house
+		// Handle house
 		const mouse = {
 			x: null,
 			y: null,
@@ -34,6 +34,7 @@ class Konsol extends React.Component {
 
 		const textCoordinate = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
+		// Initialise particle
 		class Particle {
 			constructor(x, y) {
 				this.x = x;
@@ -90,6 +91,7 @@ class Konsol extends React.Component {
 		}
 		init();
 
+		// Animation logic
 		function animate() {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			for (let i = 0; i < particleArray.length; i++) {
@@ -122,7 +124,7 @@ class Konsol extends React.Component {
 			}
 		}
 
-		// citation
+		// Citation
 		const domCitation = document.getElementById("citation");
 
 		(function textDisplay() {
@@ -150,7 +152,7 @@ class Konsol extends React.Component {
 			}, 25);
 		})();
 
-		// song play
+		// Song play
 		const songOne = new Audio("../assets/songs/song-one.mp3");
 		const songTwo = new Audio("../assets/songs/song-two.mp3");
 		const songThree = new Audio("../assets/songs/song-three.mp3");
@@ -198,7 +200,7 @@ class Konsol extends React.Component {
 			});
 		}
 
-		// song canvas
+		// Canvas song
 		class Microphone {
 			constructor() {
 				this.initialized = false;

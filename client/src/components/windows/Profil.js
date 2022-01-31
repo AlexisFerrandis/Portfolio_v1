@@ -11,12 +11,14 @@ const Profil = (props) => {
 				Paris, France
 			</p>
 			<div className="info">
-				<h3>À propos</h3>
+				<h3>Bonjour</h3>
 				<p>
 					Bienvenue sur mon portfolio,
 					<br />
 					<br />
-					En tant que développeur web indépendant, je fais preuve de créativité pour développer des applications authentiques et originales.
+					Je suis développeur web indépendant.
+					<br />
+					J'aime faire preuve de créativité pour développer des applications authentiques et originales.
 					<br />
 					<br />
 					Pour des missions en freelance, vous pouvez m'envoyer un <a href="mailto:alexisferrandis@protonmail.com">email,</a> ou visiter la page de contact.
@@ -25,7 +27,6 @@ const Profil = (props) => {
 				</p>
 			</div>
 			<div className="info">
-				<h3>Skills</h3>
 				<div className="skills">
 					<img src="../assets/icons/html.svg" alt="html" />
 					<img src="../assets/icons/css.svg" alt="css" />
