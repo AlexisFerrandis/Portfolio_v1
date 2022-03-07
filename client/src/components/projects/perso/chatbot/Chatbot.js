@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+// Img
+import bot from "../../../../assets/img/projects/chatbot/chatbot-ico.jpg";
+import send from "../../../../assets/icons/paper-plane.svg";
+
 const Chatbot = () => {
 	const [userMessage, setUserMessage] = useState("");
 	const [suggestions, setSuggestions] = useState(true);
@@ -80,7 +84,7 @@ const Chatbot = () => {
 
 		setTimeout(() => {
 			const chatArea = document.getElementById("chatArea");
-			let botMsgDOM = '<div class="bot box"><img src="../assets/img/projects/chatbot/chatbot-ico.gif" alt="T.bot" /><div className="msg-display"><p>' + botAnswer + "</p></div></div>";
+			let botMsgDOM = `<div class="bot box"><img src=${bot} alt="T.bot" /><div className="msg-display"><p>` + botAnswer + `</p></div></div>`;
 			chatArea.innerHTML += botMsgDOM;
 			chatArea.scrollTo(0, 10000);
 		}, Math.floor(Math.random() * (500 - 100)) + 100);
@@ -111,7 +115,7 @@ const Chatbot = () => {
 		<div className="chatbot-content">
 			<div id="chatArea">
 				<div className="bot box">
-					<img src="../assets/img/projects/chatbot/chatbot-ico.gif" alt="T.bot" />
+					<img src={bot} alt="T.bot" />
 					<div className="msg-display">
 						<p>
 							Bonjour, je suis T.bot.
@@ -134,7 +138,7 @@ const Chatbot = () => {
 				{error && <p className="error">message incorrect</p>}
 				<input name="userMessage" type="text" placeholder="Message" value={userMessage} onChange={(e) => setUserMessage(e.target.value)} onKeyDown={handleEnter} />
 				<button type="button" onClick={handleSubmit}>
-					<img src="../assets/icons/paper-plane.svg" alt="envoyer" />
+					<img src={send} alt="envoyer" />
 				</button>
 			</div>
 		</div>

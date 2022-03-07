@@ -1,5 +1,29 @@
 import React from "react";
 
+// Song
+import firstSong from "../../../../assets/songs/song-one.mp3";
+import secondSong from "../../../../assets/songs/song-two.mp3";
+import thirdSong from "../../../../assets/songs/song-three.mp3";
+
+// Img
+import konsolLogo from "../../../../assets/img/projects/konsol/logo.png";
+
+import play from "../../../../assets/icons/play.svg";
+import pause from "../../../../assets/icons/pause.svg";
+
+import firstCover from "../../../../assets/img/projects/konsol/scott-webb-S_eu4NqJt5Y-unsplash.jpg";
+import secondCover from "../../../../assets/img/projects/konsol/bia-andrade-PO8Woh4YBD8-unsplash.jpg";
+import thirdCover from "../../../../assets/img/projects/konsol/sharon-mccutcheon-uk-no6Yv91g-unsplash.jpg";
+
+import firstEvent from "../../../../assets/img/projects/konsol/danny-howe-bn-D2bCvpik-unsplash.jpg";
+import secondEvent from "../../../../assets/img/projects/konsol/danny-howe-74kShnX5zZI-unsplash.jpg";
+import thirdEvent from "../../../../assets/img/projects/konsol/samuel-regan-asante-3BcNKoySAq0-unsplash.jpg";
+
+import fb from "../../../../assets/icons/facebook.svg";
+import tt from "../../../../assets/icons/twitter.svg";
+import ig from "../../../../assets/icons/instagram.svg";
+import yt from "../../../../assets/icons/youtube.svg";
+
 class Konsol extends React.Component {
 	componentDidMount() {
 		// Logo particle
@@ -153,9 +177,9 @@ class Konsol extends React.Component {
 		})();
 
 		// Song play
-		const songOne = new Audio("../assets/songs/song-one.mp3");
-		const songTwo = new Audio("../assets/songs/song-two.mp3");
-		const songThree = new Audio("../assets/songs/song-three.mp3");
+		const songOne = new Audio(firstSong);
+		const songTwo = new Audio(secondSong);
+		const songThree = new Audio(thirdSong);
 
 		const players = document.querySelectorAll(".play");
 		for (let i = 0; i < players.length; i++) {
@@ -313,7 +337,7 @@ class Konsol extends React.Component {
 					<div className="name">건솔</div>
 					<section>
 						<div className="logo">
-							<img src="../assets/img/projects/konsol/logo.png" alt="logo" />
+							<img src={konsolLogo} alt="logo" />
 							<h1>
 								<span>건솔</span> - 사운드 디자인 아티스트
 							</h1>
@@ -328,45 +352,45 @@ class Konsol extends React.Component {
 						<h2>음악</h2>
 
 						<article className="song-article">
-							<img className="cover" src="../assets/img/projects/konsol/scott-webb-S_eu4NqJt5Y-unsplash.jpg" alt="First album" />
+							<img className="cover" src={firstCover} alt="First album" />
 							<div className="player">
 								<div className="title">
 									<h3>슬프게도 진실하다</h3>
 									<p>"진심으로 슬프다"</p>
 									<>
-										<img className="play" id="songOneBtn" src="../assets/icons/play.svg" alt="play" />
+										<img className="play" id="songOneBtn" src={play} alt="play" />
 										<br />
-										<img className="pause" id="songOnePause" src="../assets/icons/pause.svg" alt="pause" />
+										<img className="pause" id="songOnePause" src={pause} alt="pause" />
 									</>
 								</div>
 							</div>
 						</article>
 
 						<article className="song-article">
-							<img className="cover" src="../assets/img/projects/konsol/bia-andrade-PO8Woh4YBD8-unsplash.jpg" alt="Second album" />
+							<img className="cover" src={secondCover} alt="Second album" />
 							<div className="player">
 								<div className="title">
 									<h3>그렇지 않으면 다른</h3>
 									<p>"그가 될 수 있도록"</p>
 									<>
-										<img className="play" id="songTwoBtn" src="../assets/icons/play.svg" alt="play" />
+										<img className="play" id="songTwoBtn" src={play} alt="play" />
 										<br />
-										<img className="pause" id="songTwoPause" src="../assets/icons/pause.svg" alt="pause" />
+										<img className="pause" id="songTwoPause" src={pause} alt="pause" />
 									</>
 								</div>
 							</div>
 						</article>
 
 						<article className="song-article">
-							<img className="cover" src="../assets/img/projects/konsol/sharon-mccutcheon-uk-no6Yv91g-unsplash.jpg" alt="Third album" />
+							<img className="cover" src={thirdCover} alt="Third album" />
 							<div className="player">
 								<div className="title">
 									<h3>자명종은 곧 울릴거야</h3>
 									<p>"하지만 얼마나 오랫동안"</p>
 									<>
-										<img className="play" id="songThreeBtn" src="../assets/icons/play.svg" alt="play" />
+										<img className="play" id="songThreeBtn" src={play} alt="play" />
 										<br />
-										<img className="pause" id="songThreePause" src="../assets/icons/pause.svg" alt="pause" />
+										<img className="pause" id="songThreePause" src={pause} alt="pause" />
 									</>
 								</div>
 							</div>
@@ -378,7 +402,7 @@ class Konsol extends React.Component {
 
 						<article className="event-article">
 							<h3>칸 영화제</h3>
-							<img src="../assets/img/projects/konsol/danny-howe-bn-D2bCvpik-unsplash.jpg" alt="Cannes festival" />
+							<img src={firstEvent} alt="Cannes festival" />
 							<p>
 								칸 영화제는 매년 5월 하순 12일 동안 칸에서 열리는 국제 영화제이다. <span>주요</span> 상영은 크루아제트 산책로 입구에 위치한 팔레 데 페스티발 에서 <span>진행됩니다</span> ...
 							</p>
@@ -386,7 +410,7 @@ class Konsol extends React.Component {
 
 						<article className="event-article">
 							<h3>리오 카니발</h3>
-							<img src="../assets/img/projects/konsol/danny-howe-74kShnX5zZI-unsplash.jpg" alt="Rio festival" />
+							<img src={secondEvent} alt="Rio festival" />
 							<p>
 								두르 <span>페스티벌은</span> 카를로 디 안토니오 가 조직한 대안적, 독립 및 다문화 음악의 유럽 <span>축제로</span>, 매년 여름 벨기에 몽스 근처의 두르(Dour)에서 프랑스 국경 근처의 두르 <span>풍력</span> 발전소에서 5일 동안 열립니다. 에노 ...
 							</p>
@@ -394,7 +418,7 @@ class Konsol extends React.Component {
 
 						<article className="event-article">
 							<h3>롤라팔루자</h3>
-							<img src="../assets/img/projects/konsol/samuel-regan-asante-3BcNKoySAq0-unsplash.jpg" alt="Lollapalooza festival" />
+							<img src={thirdEvent} alt="Lollapalooza festival" />
 							<p>
 								는 일리노이 주 시카고 그랜트 파크에서 <span>열리는</span> 연례 4일 음악 축제입니다. 공연에는 얼터너티브 록, 헤비 메탈, 펑크 록, <span>힙합</span> 및 전자 음악이 포함되지만 이에 국한되지 않습니다 ...
 							</p>
@@ -406,16 +430,16 @@ class Konsol extends React.Component {
 					<h2>연락하다</h2>
 					<ul className="footer-links__social">
 						<li className="social-ico">
-							<img src="../assets/icons/facebook.svg" alt="facebook" />
+							<img src={fb} alt="facebook" />
 						</li>
 						<li className="social-ico">
-							<img src="../assets/icons/twitter.svg" alt="twitter" />
+							<img src={tt} alt="twitter" />
 						</li>
 						<li className="social-ico">
-							<img src="../assets/icons/instagram.svg" alt="instagram" />
+							<img src={ig} alt="instagram" />
 						</li>
 						<li className="social-ico">
-							<img src="../assets/icons/youtube.svg" alt="youtube" />
+							<img src={yt} alt="youtube" />
 						</li>
 					</ul>
 				</footer>

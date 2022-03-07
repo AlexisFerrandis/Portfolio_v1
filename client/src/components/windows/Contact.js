@@ -1,6 +1,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+// Img
+import phoneIco from "../../assets/icons/phone.svg";
+import mailIco from "../../assets/icons/mail.svg";
+import ldIco from "../../assets/icons/linkedin.svg";
+import ghIco from "../../assets/icons/github.svg";
+import ttIco from "../../assets/icons/twitter.svg";
+
 export const Contact = () => {
 	// Input states
 	const [name, setName] = useState("");
@@ -19,13 +26,13 @@ export const Contact = () => {
 
 	// Regex
 	function inputValidation() {
-		if (name.length < 24 && name.length > 3 && /^([A-Za-z]{3,20})?([-]{0,1})?([A-Za-z]{3,20})$/.test(name)) {
+		if (name.length < 24 && name.length >= 3 && /^([A-Za-z]{3,20})?([-]{0,1})?([A-Za-z]{3,20})$/.test(name)) {
 			setNameError(false);
 			if (compagny.length < 24) {
 				setCompagnyError(false);
 				if (mail.length < 24 && (mail.length > 6) & /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)) {
 					setMailError(false);
-					if (message.length < 300 && message.length > 12 && /^([\w-.]{12,300})$/.test(message)) {
+					if (message.length < 300 && message.length > 12) {
 						setMessageError(false);
 						return true;
 					} else {
@@ -71,11 +78,11 @@ export const Contact = () => {
 		<div className="content">
 			<div className="details">
 				<a href="tel:+33634354817">
-					<img src="../assets/icons/phone.svg" alt="phone" />
+					<img src={phoneIco} alt="phone" />
 					+33634354817
 				</a>
 				<a href="mailto:alexisferrandis@protonmail.com">
-					<img src="../assets/icons/mail.svg" alt="mail" />
+					<img src={mailIco} alt="mail" />
 					alexisferrandis@protonmail.com
 				</a>
 			</div>
@@ -116,13 +123,13 @@ export const Contact = () => {
 
 			<div className="social">
 				<a href="https://www.linkedin.com/in/alexis-ferrandis-5b5343106/">
-					<img src="../assets/icons/linkedin.svg" alt="linkdin" />
+					<img src={ldIco} alt="linkdin" />
 				</a>
 				<a href="https://github.com/AlexisFerrandis">
-					<img src="../assets/icons/github.svg" alt="github" />
+					<img src={ghIco} alt="github" />
 				</a>
 				<a href="https://twitter.com/AlexisFerrandis">
-					<img src="../assets/icons/twitter.svg" alt="twitter" />
+					<img src={ttIco} alt="twitter" />
 				</a>
 			</div>
 		</div>

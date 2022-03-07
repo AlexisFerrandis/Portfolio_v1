@@ -1,5 +1,11 @@
 import React from "react";
 
+// Img
+import up from "../../assets/icons/chevron-up.svg";
+import down from "../../assets/icons/chevron-down.svg";
+import left from "../../assets/icons/chevron-left.svg";
+import right from "../../assets/icons/chevron-right.svg";
+
 class TwoOFourHeight extends React.Component {
 	componentDidMount() {
 		// Initialise grid
@@ -223,7 +229,7 @@ class TwoOFourHeight extends React.Component {
 			return false;
 		});
 
-		// arrows
+		// Arrows
 		const keys = document.querySelectorAll(".key");
 		for (let i = 0; i < keys.length; i++) {
 			keys[i].addEventListener("click", () => {
@@ -274,18 +280,18 @@ class TwoOFourHeight extends React.Component {
 				<div className="controls">
 					<div className="up">
 						<div className="key" id="up">
-							<img ref="img" src="../assets/icons/chevron-up.svg" alt="up" />
+							<img ref="img" src={up} alt="up" />
 						</div>
 					</div>
 					<div className="left-down-right">
 						<div className="key" id="left">
-							<img ref="img" src="../assets/icons/chevron-left.svg" alt="left" />
+							<img ref="img" src={left} alt="left" />
 						</div>
 						<div className="key" id="down">
-							<img ref="img" src="../assets/icons/chevron-down.svg" alt="down" />
+							<img ref="img" src={down} alt="down" />
 						</div>
 						<div className="key" id="right">
-							<img ref="img" src="../assets/icons/chevron-right.svg" alt="right" />
+							<img ref="img" src={right} alt="right" />
 						</div>
 					</div>
 				</div>

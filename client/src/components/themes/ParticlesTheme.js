@@ -1,5 +1,8 @@
 import React from "react";
 
+// Img
+import afLogo from "../../assets/logo/af-logo.svg";
+
 class ParticlesTheme extends React.Component {
 	componentDidMount() {
 		const canvas = this.refs.particlesCanvas;
@@ -156,7 +159,7 @@ class ParticlesTheme extends React.Component {
 		return (
 			<div className="desktop-theme__particles">
 				<canvas ref="particlesCanvas" id="particlesCanvas" />
-				<img ref="img" src="../assets/logo/af-logo.svg" alt="logo" className="logo" />
+				<img ref="img" src={afLogo} alt="logo" className="logo" />
 			</div>
 		);
 	}

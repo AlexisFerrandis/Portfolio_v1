@@ -27,6 +27,13 @@ import TwoOFourHeight from "../arcade/TwoOFourHeight";
 import Chatbot from "../projects/perso/chatbot/Chatbot";
 import Konsol from "../projects/perso/konsol/Konsol";
 
+// Img
+import profil from "../../assets/icons/profil.svg";
+import folder from "../../assets/icons/folder.svg";
+import contact from "../../assets/icons/contact.svg";
+import themes from "../../assets/icons/themes.svg";
+import arcade from "../../assets/icons/arcade.svg";
+
 const Navbar = () => {
 	// Windows
 	const [profilWindow, setProfilWindow] = useState(false);
@@ -84,19 +91,19 @@ const Navbar = () => {
 			{/* Navbar window opener */}
 			<div className="navbar">
 				<button onClick={() => setProfilWindow(!profilWindow)}>
-					<img src="../assets/icons/profil.svg" alt="Profil" />
+					<img src={profil} alt="Profil" />
 				</button>
 				<button onClick={() => setPortfolioWindow(!portfolioWindow)}>
-					<img src="../assets/icons/folder.svg" alt="Portfolio" />
+					<img src={folder} alt="Portfolio" />
 				</button>
 				<button onClick={() => setContactWindow(!contactWindow)}>
-					<img src="../assets/icons/contact.svg" alt="Contact" />
+					<img src={contact} alt="Contact" />
 				</button>
 				<button onClick={() => setThemesWindow(!themesWindow)}>
-					<img src="../assets/icons/themes.svg" alt="Themes" />
+					<img src={themes} alt="Themes" />
 				</button>
 				<button onClick={() => setArcadeWindow(!arcadeWindow)}>
-					<img src="../assets/icons/arcade.svg" alt="Launch the game !" />
+					<img src={arcade} alt="Launch the game !" />
 				</button>
 			</div>
 			{/* Windows display */}

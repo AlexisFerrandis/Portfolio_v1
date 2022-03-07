@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import InfoBubble from "./InfoBubble";
 
+// Img
+import bacchusImg from "../../assets/img/projects/bacchus/bacchus.jpg";
+import chatbotImg from "../../assets/img/projects/chatbot/chatbot.gif";
+import mernImg from "../../assets/img/projects/mern/mern.jpg";
+import konsolImg from "../../assets/img/projects/konsol/logo.png";
+import logo from "../../assets/logo/af-logo.svg";
+
 const Portfolio = (props) => {
 	// Portfolio sections
 	const [proDisplay, setProDisplay] = useState(true);
@@ -43,7 +50,7 @@ const Portfolio = (props) => {
 			{proDisplay && (
 				<div className="content">
 					<div className="portfolio-illustration">
-						<img className="illustration-preview" src="../assets/img/projects/bacchus/bacchus.jpg" alt="bacchus" onClick={() => setBacchusInfoBubble(!bacchusInfoBubble)} />
+						<img className="illustration-preview" src={bacchusImg} alt="bacchus" onClick={() => setBacchusInfoBubble(!bacchusInfoBubble)} />
 						<p>
 							Le Repaire
 							<br />
@@ -62,8 +69,8 @@ const Portfolio = (props) => {
 										Responsive
 									</h5>
 								}
-								github={"https://github.com/AlexisFerrandis/Bacchus-web-3.0"}
-								// link={"https://www.lerepairedebacchus.com/"}
+								// github={"https://github.com/AlexisFerrandis/Bacchus-web-3.0"}
+								link={"https://www.lerepairedebacchus.com/"}
 							/>
 						)}
 					</div>
@@ -72,11 +79,11 @@ const Portfolio = (props) => {
 			{persoDisplay && (
 				<div className="content">
 					<div className="portfolio-illustration" onClick={() => props.chatbot(true)}>
-						<img className="illustration-preview" src="../assets/img/projects/chatbot/chatbot.gif" alt="chatbot" />
+						<img className="illustration-preview" src={chatbotImg} alt="chatbot" />
 						<p>Chatbot</p>
 					</div>
 					<div className="portfolio-illustration">
-						<img className="illustration-preview" src="../assets/img/projects/mern/mern.jpg" alt="MERN social network" onClick={() => setNetworkInfoBubble(!networkInfoBubble)} />
+						<img className="illustration-preview" src={mernImg} alt="MERN social network" onClick={() => setNetworkInfoBubble(!networkInfoBubble)} />
 						<p>Network</p>
 						{networkInfoBubble && (
 							<InfoBubble
@@ -99,11 +106,11 @@ const Portfolio = (props) => {
 						)}
 					</div>
 					<div className="portfolio-illustration" onClick={() => props.konsol(true)}>
-						<img className="illustration-preview" src="../assets/img/projects/konsol/logo.png" alt="konsol" />
+						<img className="illustration-preview" src={konsolImg} alt="konsol" />
 						<p>KonSol</p>
 					</div>
 					<div className="portfolio-illustration">
-						<img className="illustration-preview" src="../assets/logo/af-white-logo.svg" alt="site personnel" onClick={() => setPortfolioInfoBubble(!portfolioInfoBubble)} />
+						<img className="illustration-preview" src={logo} alt="site personnel" onClick={() => setPortfolioInfoBubble(!portfolioInfoBubble)} />
 						<p>Portfolio</p>
 						{portfolioInfoBubble && <InfoBubble github={"https://github.com/AlexisFerrandis/AlexisFerrandis"} />}
 					</div>

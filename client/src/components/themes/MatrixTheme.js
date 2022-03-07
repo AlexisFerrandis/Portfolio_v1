@@ -1,5 +1,8 @@
 import React from "react";
 
+// Img
+import afLogo from "../../assets/logo/af-logo.svg";
+
 class MatrixTheme extends React.Component {
 	componentDidMount() {
 		const canvas = this.refs.matrixCanvas;
@@ -97,7 +100,7 @@ class MatrixTheme extends React.Component {
 		return (
 			<div className="desktop-theme__matrix">
 				<canvas ref="matrixCanvas" id="matrixCanvas" />
-				<img ref="img" src="../assets/logo/af-logo.svg" alt="logo" className="logo" />
+				<img ref="img" src={afLogo} alt="logo" className="logo" />
 			</div>
 		);
 	}

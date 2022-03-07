@@ -1,5 +1,8 @@
 import React from "react";
 
+// Img
+import afLogo from "../../assets/logo/af-logo.svg";
+
 const DefaultTheme = () => {
 	return (
 		<>
@@ -8,7 +11,7 @@ const DefaultTheme = () => {
 				<div className="cloud cloud__two"></div>
 				<div className="cloud cloud__three"></div>
 				<div className="cloud cloud__four"></div>
-				<img src="../assets/logo/af-logo.svg" alt="alexis's logo" className="logo" />
+				<img src={afLogo} alt="alexis's logo" className="logo" />
 			</div>
 		</>
 	);

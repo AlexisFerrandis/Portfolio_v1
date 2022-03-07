@@ -1,13 +1,24 @@
 import React from "react";
 
+// Img
+import profilPic from "../../assets/img/profil-pic.png";
+
+import locIco from "../../assets/icons/map-marker.svg";
+import htmlIco from "../../assets/icons/html.svg";
+import cssIco from "../../assets/icons/css.svg";
+import sassIco from "../../assets/icons/sass.svg";
+import jsIco from "../../assets/icons/javascript.svg";
+import dbIco from "../../assets/icons/database.svg";
+import reactIco from "../../assets/icons/react.svg";
+
 const Profil = (props) => {
 	return (
 		<div className="content">
-			<img className="profil-pic" src="../assets/img/profil-pic.png" alt="profil pic" />
+			<img className="profil-pic" src={profilPic} alt="profil pic" />
 			<h1>Alexis Ferrandis</h1>
 			<h2>Développement Web</h2>
 			<p className="localisation">
-				<img className="localisation" src="../assets/icons/map-marker.svg" alt="localisation" />
+				<img className="localisation" src={locIco} alt="localisation" />
 				Paris, France
 			</p>
 			<div className="info">
@@ -16,7 +27,7 @@ const Profil = (props) => {
 					Bienvenue sur mon portfolio,
 					<br />
 					<br />
-					Je suis développeur web indépendant.
+					Je suis développeur web indépendant orienté frontend.
 					<br />
 					J'aime faire preuve de créativité pour développer des applications authentiques et originales.
 					<br />
@@ -28,14 +39,14 @@ const Profil = (props) => {
 			</div>
 			<div className="info">
 				<div className="skills">
-					<img src="../assets/icons/html.svg" alt="html" />
-					<img src="../assets/icons/css.svg" alt="css" />
-					<img src="../assets/icons/sass.svg" alt="sass" />
-					<img src="../assets/icons/javascript.svg" alt="javascript" />
+					<img src={htmlIco} alt="html" />
+					<img src={cssIco} alt="css" />
+					<img src={sassIco} alt="sass" />
+					<img src={jsIco} alt="javascript" />
 					<div className="database">
-						<img src="../assets/icons/database.svg" alt="database" />
+						<img src={dbIco} alt="database" />
 					</div>
-					<img src="../assets/icons/react.svg" alt="react" />
+					<img src={reactIco} alt="react" />
 				</div>
 			</div>
 			<button className="btn" type="button" onClick={() => props.contactBtn(true)}>

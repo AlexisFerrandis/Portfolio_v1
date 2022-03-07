@@ -1,5 +1,9 @@
 import React from "react";
 
+// Img
+import floppy from "../../assets/img/arcade/floppy-bird/floppy-bird-set.png";
+import loader from "../../assets/icons/loader.svg";
+
 class FloppyBird extends React.Component {
 	componentDidMount() {
 		const canvas = this.refs.floppyBirdCanvas;
@@ -8,7 +12,7 @@ class FloppyBird extends React.Component {
 		const img = new Image();
 
 		loadImg.onload = () => {
-			img.src = "../assets/img/arcade/floppy-bird/floppy-bird-set.png";
+			img.src = floppy;
 
 			// General settings
 			let gamePlaying = false;
@@ -113,7 +117,7 @@ class FloppyBird extends React.Component {
 			<div>
 				<h5>Floppy Bird</h5>
 				<canvas ref="floppyBirdCanvas" id="floppyBirdCanvas" width="360" height="650"></canvas>
-				<img ref="img" src="../assets/icons/loader.svg" alt="Alexis Ferrandis's logo" className="hidden" />
+				<img ref="img" src={loader} alt="Alexis Ferrandis's logo" className="hidden" />
 			</div>
 		);
 	}

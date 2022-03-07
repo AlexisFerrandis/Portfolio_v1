@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+// Img
+import github from "../../assets/icons/github.svg";
+import extLink from "../../assets/icons/external-link.svg";
+
 const InfoBubble = (props) => {
 	const [infos, setInfos] = useState(false);
 
@@ -17,13 +21,13 @@ const InfoBubble = (props) => {
 						/>
 					)} */}
 					{props.github && (
-						<a href={props.github}>
-							<img src="../assets/icons/github-circle.svg" alt="github" />
+						<a href={props.github} target="_blank" rel="noopener noreferrer">
+							<img src={github} alt="github" />
 						</a>
 					)}
 					{props.link && (
-						<a href={props.link}>
-							<img src="../assets/icons/external-link.svg" alt="open" />
+						<a href={props.link} target="_blank" rel="noopener noreferrer">
+							<img src={extLink} alt="open" />
 						</a>
 					)}
 				</div>
