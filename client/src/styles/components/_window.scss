@@ -44,6 +44,10 @@
 	&:hover {
 		filter: brightness(0.9);
 	}
+	@include mobile-breakpoint {
+		width: 15px;
+		height: 15px;
+	}
 }
 .red-button {
 	background-color: $red-button;

@@ -58,7 +58,7 @@ export const Contact = () => {
 		e.preventDefault();
 
 		if (inputValidation()) {
-			emailjs.sendForm("", "", form.current, "").then(
+			emailjs.sendForm("service_138iuww", "template_cgmxww3", form.current, "user_SkGwgFyb1mityhbwFYyle").then(
 				(res) => {
 					console.log("Message sent, thank u :)");
 					setName("");

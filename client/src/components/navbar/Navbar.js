@@ -108,7 +108,7 @@ const Navbar = () => {
 			</div>
 			{/* Windows display */}
 			{profilWindow && (
-				<Draggable cancel={"button, img, a, .skills"}>
+				<Draggable cancel={"button, img, a, .skills, p, h1, h2"}>
 					<section
 						className="window"
 						id="profilWindow"
